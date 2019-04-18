@@ -4,7 +4,7 @@
 
 [include]
 
-./js/
+./src/js/
 
 [libs]
 
