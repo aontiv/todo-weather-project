@@ -8,10 +8,19 @@ import sunny from "../../../img/sunny.png";
 import thunderWind from "../../../img/thunder-wind.png";
 import sunnyClouds from  "../../../img/sunny-clouds.png";
 
+const styles = {
+    ul: `
+        grid-row: 1;
+        display: flex;
+        overflow: hidden;
+        grid-column: 1 / 5;
+    `
+};
+
 class WeatherList extends Component {
     render() {
         return (
-            <ul>
+            <ul css={styles.ul}>
                 <WeatherItem
                     imageUrl={sunnyClouds}
                     altText="partly cloudy"

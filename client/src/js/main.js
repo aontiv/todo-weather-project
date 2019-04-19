@@ -6,6 +6,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
     html {
+        color: #858585;
         box-sizing: border-box;
         letter-spacing: 0.03125rem;
         font-family: "Montserrat", sans-serif;
@@ -30,6 +31,12 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
     }
 
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
     p {
         margin: 0;
     }
@@ -37,6 +44,10 @@ const GlobalStyles = createGlobalStyle`
     img {
         display: block;
         max-width: 100%;
+    }
+
+    input {
+        color: #858585;
     }
 `;
 
