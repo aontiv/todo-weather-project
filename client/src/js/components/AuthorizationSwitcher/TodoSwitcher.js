@@ -14,7 +14,11 @@ class TodoSwitcher extends Component {
         }
         else {
             return (
-                <TodoList />
+                <TodoList
+                    todos={this.props.todos}
+                    deleteTodo={this.props.deleteTodo}
+                    toggleTodoComplete={this.props.toggleTodoComplete}
+                />
             );
         }
     }

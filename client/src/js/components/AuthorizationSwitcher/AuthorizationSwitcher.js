@@ -1,28 +1,39 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
-import AddTodo from "./AddTodo";
 import Authorize from "./Authorize";
-import TodoSwitcher from "./TodoSwitcher";
+import TodoContainer from "./TodoContainer";
 
 class AuthorizationSwitcher extends Component {
     render() {
         const authorized = this.props.authorized;
 
-        if (authorized) {
-            return (
-                <Fragment>
-                    <AddTodo />
-                    <TodoSwitcher
-                        isEmpty={false}
-                    />
-                </Fragment>
-            );
-        }
-        else {
-            return (
-                <Authorize />
-            );
-        }
+        return (
+            <Router>
+                <Route path="/" exact render={() => {
+                    if (authorized) {
+                        return (
+                            <TodoContainer />
+                        );
+                    }
+                    else {
+                        return (<Redirect to="/login" />);
+                    }
+                }} />
+                <Route path="/login" render={() => {
+                    if (authorized) {
+                        return (<Redirect to="/" />);
+                    }
+                    else {
+                        return (
+                            <Authorize
+                                login={this.props.login}
+                            />
+                        );
+                    }
+                }} />
+            </Router>
+        );
     }
 }
 

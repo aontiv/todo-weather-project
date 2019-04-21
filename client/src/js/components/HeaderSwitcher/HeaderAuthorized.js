@@ -77,10 +77,14 @@ const styles = {
 };
 
 class HeaderAuthorized extends Component {
+    handleLogoutClick = () => {
+        this.props.logout();
+    };
+
     render() {
         return (
             <header css={styles.header}>
-                <a css={styles.a}>logout</a>
+                <a css={styles.a} onClick={this.handleLogoutClick}>logout</a>
                 <div css={styles.container}>
                     <h1 css={styles.h1}>Todo Weather</h1>
                     <span css={styles.span}>{this.props.username}</span>

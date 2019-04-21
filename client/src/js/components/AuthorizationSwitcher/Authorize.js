@@ -29,7 +29,7 @@ const styles = {
         @media screen and (min-width: 37.5rem) {
             height: 2.75rem;
             padding: 0.625rem;
-            font-size: 1.75rem;
+            font-size: 1.25rem;
         }
 
         @media screen and (min-width: 60rem) {
@@ -55,44 +55,110 @@ const styles = {
         @media screen and (min-width: 37.5rem) {
             height: 2.75rem;
             padding: 0.5rem;
-            font-size: 1.75rem;
+            font-size: 1.25rem;
         }
 
         @media screen and (min-width: 60rem) {
             width: 33%;
         }
     `,
-    p: `
+    p: css`
         color: #858585;
         font-size: 0.75rem;
 
         @media screen and (min-width: 37.5rem) {
-            font-size: 1.25rem;
+            font-size: 1rem;
         }
     `,
-    span: css`
-        border-bottom-width: 1px;
-        border-bottom-style: solid;
-        border-bottom-color: transparent;
-        transition: color 500ms, border-bottom-color 500ms;
+    login: css`
+        border-bottom: 2px solid ${props => props.context === "login" ? props.theme.secondary : "transparent"};
 
-        :hover {
+        &:hover {
             cursor: pointer;
-            color: ${props => props.theme.primary};
-            border-bottom-color: ${props => props.theme.primary};
+        }
+    `,
+    register: css`
+        border-bottom: 2px solid ${props => props.context === "register" ? props.theme.secondary : "transparent"};
+
+        &:hover {
+            cursor: pointer;
         }
     `
 };
 
 class Authorize extends Component {
+    state = {
+        fields: {
+            username: "",
+            password: ""
+        },
+        context: "login"
+    };
+
+    handleFieldChange = evt => {
+        var fields = { ...this.state.fields, [evt.target.name]: evt.target.value };
+        this.setState({ fields });
+    };
+
+    handleContextChange = evt => {
+        this.setState({ context: evt.target.textContent });
+    };
+
+    handleFormSubmit = evt => {
+        evt.preventDefault();
+        if (this.state.context === "login") {
+            this.handleLogin();
+        }
+        else {
+            this.handleRegister();
+        }
+    };
+
+    handleLogin = () => {
+        const username = this.state.fields.username;
+        this.props.login(username);
+    };
+
+    handleRegister = () => {
+
+    };
+
     render() {
         return (
-            <div css={styles.container}>
-                <input css={styles.input} type="text" placeholder="username" />
-                <input css={styles.input} type="password" placeholder="password" />
-                <button css={styles.button} type="button">LOGIN</button>
-                <p css={styles.p}><span css={styles.span}>login</span> | <span css={styles.span}>register</span></p>
-            </div>
+            <form css={styles.container} onSubmit={this.handleFormSubmit}>
+                <input
+                    css={styles.input}
+                    type="text"
+                    placeholder="username"
+                    value={this.state.fields.username}
+                    name="username"
+                    onChange={this.handleFieldChange}
+                />
+                <input
+                    css={styles.input}
+                    type="password"
+                    placeholder="password"
+                    value={this.state.fields.password}
+                    name="password"
+                    onChange={this.handleFieldChange}
+                />
+                <button
+                    css={styles.button}
+                    type="submit"
+                >
+                    {this.state.context.toUpperCase()}
+                </button>
+                <p css={styles.p}>
+                    <span
+                        css={styles.login}
+                        context={this.state.context}
+                        onClick={this.handleContextChange}>login</span> |&nbsp;
+                    <span
+                        css={styles.register}
+                        context={this.state.context}
+                        onClick={this.handleContextChange}>register</span>
+                </p>
+            </form>
         );
     }
 }

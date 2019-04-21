@@ -33,19 +33,6 @@ const styles = {
             font-size: 1.25rem;
         }
     `,
-    edit: css`
-        font-size: 0.85rem;
-        margin-right: 1rem;
-        color: ${props => props.theme.primary};
-
-        :hover {
-            cursor: pointer;
-        }
-
-        @media screen and (min-width: 37.5rem) {
-            font-size: 1.25rem;
-        }
-    `,
     img: `
         width: 0.75rem;
         display: inline-block;
@@ -74,21 +61,28 @@ const styles = {
     `
 };
 
-class TodoItem extends Component {
+class Todo extends Component {
+    handleDeleteClick = () => {
+        this.props.deleteTodo(this.props.id);
+    };
+
+    handleTodoClick = () => {
+        this.props.toggleTodoComplete(this.props.id);
+    };
+
     render() {
         return (
             <li css={styles.li}>
                 <div css={styles.tile}>
                     <span css={styles.timestamp}>{this.props.timestamp}</span>
                     <div>
-                        <a css={styles.edit}>edit</a>
-                        <a><img css={styles.img} src={timesSolid} alt="delete" /></a>
+                        <a onClick={this.handleDeleteClick}><img css={styles.img} src={timesSolid} alt="delete" /></a>
                     </div>
                 </div>
-                <p css={styles.p}>{this.props.text}</p>
+                <p css={styles.p} onClick={this.handleTodoClick}>{this.props.text}</p>
             </li>
         );
     }
 }
 
-export default TodoItem;
+export default Todo;

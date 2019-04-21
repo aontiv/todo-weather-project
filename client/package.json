@@ -9,13 +9,16 @@
         "build:watch": "webpack --colors --mode=development --watch"
     },
     "dependencies": {
+        "moment": "^2.24.0",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
         "react-router-dom": "^5.0.0",
-        "styled-components": "^4.2.0"
+        "styled-components": "^4.2.0",
+        "uuid": "^3.3.2"
     },
     "devDependencies": {
         "@babel/core": "^7.4.3",
+        "@babel/plugin-proposal-class-properties": "^7.4.0",
         "@babel/preset-env": "^7.4.3",
         "@babel/preset-flow": "^7.0.0",
         "@babel/preset-react": "^7.0.0",

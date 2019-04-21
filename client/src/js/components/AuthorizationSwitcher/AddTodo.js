@@ -53,12 +53,39 @@ const styles = {
 };
 
 class AddTodo extends Component {
+    state = {
+        fields: {
+            text: ""
+        }
+    };
+
+    handleTextChange = evt => {
+        const text = evt.target.value;
+        this.setState({ fields: { text }});
+    };
+
+    handleFormSubmit = evt => {
+        evt.preventDefault();
+        this.props.addTodo(this.state.fields.text);
+        this.setState({ fields: { text: "" } });
+    };
+
     render() {
         return (
-            <div css={styles.container}>
-                <input css={styles.input} type="text" />
-                <button css={styles.button} type="button">ADD</button>
-            </div>
+            <form css={styles.container} onSubmit={this.handleFormSubmit}>
+                <input
+                    css={styles.input}
+                    type="text"
+                    value={this.state.fields.text}
+                    onChange={this.handleTextChange}
+                />
+                <button
+                    css={styles.button}
+                    type="submit"
+                >
+                    ADD
+                </button>
+            </form>
         );
     }
 }

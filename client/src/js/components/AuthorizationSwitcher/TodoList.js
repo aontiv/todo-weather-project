@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import TodoItem from "./TodoItem";
+import Todo from "./Todo";
 
 const styles = {
     container: `
@@ -13,18 +13,18 @@ class TodoList extends Component {
     render() {
         return (
             <ul css={styles.container}>
-                <TodoItem
-                    timestamp="April 03, 2019 12:05:35 PM"
-                    text="Walk the dog"
-                />
-                <TodoItem
-                    timestamp="April 01, 2019 01:15:50 PM"
-                    text={<s>Take out the trash</s>}
-                />
-                <TodoItem
-                    timestamp="March 31, 2019 01:15:50 PM"
-                    text="Drop off the mail"
-                />
+                {
+                    this.props.todos.map(todo => (
+                        <Todo
+                            key={todo.id}
+                            id={todo.id}
+                            timestamp={todo.timestamp}
+                            text={todo.text}
+                            deleteTodo={this.props.deleteTodo}
+                            toggleTodoComplete={this.props.toggleTodoComplete}
+                        />
+                    ))
+                }
             </ul>
         );
     }

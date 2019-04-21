@@ -31,17 +31,33 @@ const styles = {
 };
 
 class App extends Component {
+    state = {
+        username: "",
+        authorized: false
+    };
+
+    login = username => {
+        this.setState({ username, authorized: true });
+    };
+
+    logout = () => {
+        this.setState({ username: "", authorized: false });
+    };
+
     render() {
         return (
             <ThemeProvider theme={theme}>
                 <div css={styles.app}>
                     <HeaderSwitcher
-                        authorized={true}
+                        authorized={this.state.authorized}
+                        username={this.state.username}
+                        logout={this.logout}
                     />
                     <div css={styles.grid}>
                         <WeatherList />
                         <AuthorizationSwitcher
-                            authorized={true}
+                            login={this.login}
+                            authorized={this.state.authorized}
                         />
                     </div>
                 </div>

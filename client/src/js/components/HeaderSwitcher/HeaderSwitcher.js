@@ -10,7 +10,8 @@ class HeaderSwitcher extends Component {
         if (authorized) {
             return (
                 <HeaderAuthorized
-                    username="test username"
+                    username={this.props.username}
+                    logout={this.props.logout}
                 />
             );
         }
