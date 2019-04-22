@@ -32,16 +32,20 @@ const styles = {
 
 class App extends Component {
     state = {
-        username: "",
+        user: {
+            id: null,
+            username: "",
+        },
         authorized: false
     };
 
-    login = username => {
-        this.setState({ username, authorized: true });
+    login = user => {
+        this.setState({ user, authorized: true });
     };
 
     logout = () => {
-        this.setState({ username: "", authorized: false });
+        const user = { id: null, username: "" };
+        this.setState({ user, authorized: false });
     };
 
     render() {
@@ -50,13 +54,14 @@ class App extends Component {
                 <div css={styles.app}>
                     <HeaderSwitcher
                         authorized={this.state.authorized}
-                        username={this.state.username}
+                        username={this.state.user.username}
                         logout={this.logout}
                     />
                     <div css={styles.grid}>
                         <WeatherList />
                         <AuthorizationSwitcher
                             login={this.login}
+                            userId={this.state.user.id}
                             authorized={this.state.authorized}
                         />
                     </div>

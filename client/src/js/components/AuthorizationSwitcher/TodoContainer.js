@@ -1,39 +1,37 @@
 import moment from "moment";
 import uuidv4 from "uuid/v4";
-import { getFormattedTime } from "../../helpers";
 import React, { Component, Fragment } from "react";
+import { _getUserTodos, _addTodo } from "../../client-api";
+import { getFormattedTime, logResponse } from "../../helpers";
 
 import AddTodo from "./AddTodo";
 import TodoSwitcher from "./TodoSwitcher";
 
 class TodoContainer extends Component {
     state = {
-        todos: [
-            {
-                id: uuidv4(),
-                timestamp: "April 03, 2019 12:05:35 PM",
-                text: "Walk the dog",
-                complete: false
-            },
-            {
-                id: uuidv4(),
-                timestamp: "April 01, 2019 01:15:50 PM",
-                text: "Take out the trash",
-                complete: false
-            },
-            {
-                id: uuidv4(),
-                timestamp: "March 31, 2019 01:15:50 PM",
-                text: "Drop off the mail",
-                complete: false
-            }
-        ]
+        todos: []
+    };
+
+    componentDidMount() {
+        _getUserTodos(this.props.userId)
+            .then(this.handleData)
+    }
+
+    handleData = data => {
+        this.initialState(data.body);
+    };
+
+    initialState = todos => {
+        this.setState({ todos });
     };
 
     addTodo = todoText => {
         const newTodo = this.createTodo(todoText);
         const newTodos = this.state.todos.concat([newTodo]);
         this.setState({ todos: newTodos });
+
+        _addTodo(newTodo)
+            .then(logResponse)
     };
 
     deleteTodo = id => {
@@ -73,7 +71,9 @@ class TodoContainer extends Component {
         return {
             id: uuidv4(),
             timestamp: getFormattedTime(),
-            text: todoText
+            text: todoText,
+            complete: false,
+            userId: this.props.userId
         };
     };
 

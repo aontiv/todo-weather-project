@@ -4,22 +4,18 @@ export const getFormattedTime = () => {
     return moment().format("MMMM DD, YYYY hh:mm:ss A");
 };
 
-export const usernameMatch = (users, username) => {
-    let result = null;
-    users.forEach(user => {
-        if (user.username === username) {
-            result = user;
-        }
-    });
-
-    return result;
+export const readResponse = response => {
+    return response.json();
 };
 
-export const passwordMatch = (user, password) => {
-    let result = null;
-    if(user.password === password) {
-        result = { id: user.id, username: user.username };
-    }
+export const parseJSON = json => {
+    return JSON.parse(json);
+};
 
-    return result;
+export const jsonify = object => {
+    return JSON.stringify(object);
+};
+
+export const logResponse = data => {
+    console.log(data.message);
 };

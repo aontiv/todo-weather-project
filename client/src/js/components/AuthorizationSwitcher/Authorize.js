@@ -1,5 +1,7 @@
+import uuidv4 from "uuid/v4";
 import { css } from "styled-components";
 import React, { Component } from "react";
+import { _login, _addUser } from "../../client-api";
 
 const styles = {
     container: `
@@ -115,12 +117,35 @@ class Authorize extends Component {
     };
 
     handleLogin = () => {
-        const username = this.state.fields.username;
-        this.props.login(username);
+        _login(this.state.fields)
+            .then(this.login);
+    };
+
+    login = data => {
+        if (data.status === 200) {
+            this.props.login(data.body);
+        }
+        else {
+            console.log(data.message);
+        }
     };
 
     handleRegister = () => {
+        const newUser = this.createUser();
 
+        _addUser(newUser)
+            .then(this.register)
+    };
+
+    register = data => {
+        this.login(data)
+    };
+
+    createUser = () => {
+        return {
+            id: uuidv4(),
+            ...this.state.fields
+        };
     };
 
     render() {

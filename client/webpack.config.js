@@ -5,7 +5,8 @@ module.exports = {
     entry: "./src/js/main.js",
     output: {
         filename: "bundle.js",
-        path: path.resolve(__dirname, "../server/dist")
+        publicPath: "/static/",
+        path: path.resolve(__dirname, "../server/dist/static")
     },
     module: {
         rules: [
@@ -22,6 +23,12 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: "./src/index.html" })
-    ]
+        new HtmlWebpackPlugin({
+            filename: "../index.html",
+            template: "./src/index.html",
+        })
+    ],
+    node: {
+        fs: "empty"
+    }
 }

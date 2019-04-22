@@ -13,7 +13,9 @@ class AuthorizationSwitcher extends Component {
                 <Route path="/" exact render={() => {
                     if (authorized) {
                         return (
-                            <TodoContainer />
+                            <TodoContainer
+                                userId={this.props.userId}
+                            />
                         );
                     }
                     else {
