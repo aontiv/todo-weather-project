@@ -34,49 +34,20 @@ export const _addTodo = todo => {
             .then(readResponse)
 };
 
-// // UPDATE REQUESTS
-// export const _updateTodo = newTodo => {
-//     return new Promise(resolve => {
-//         window.setTimeout(() => {
-//             fs.readFile(DB, "utf8", (err, data) => {
-//                 if (err) console.log(err);
+export const _updateTodo = (id, todos) => {
+    const newTodo = todos.filter(todo => todo.id === id)[0];
 
-//                 const db = JSON.parse(data);
-//                 const newTodos = db.todosTable.map(todo => {
-//                     if (todo.id === newTodo.id) {
-//                         return newTodo;
-//                     }
-//                     return todo;
-//                 });
-//                 const newDB = JSON.stringify({ ...db, todosTable: newTodos }, null, 4);
+    return fetch("/update_todo", {
+                method: "UPDATE",
+                headers: { "Content-Type": "application/json" },
+                body: jsonify(newTodo)
+            })
+            .then(readResponse)
+};
 
-//                 fs.writeFile(DB, newDB, "utf8", err => {
-//                     if (err) console.log(err);
-
-//                     resolve(JSON.stringify({ status: 200, message: `todo with id: ${newTodo.id} updated`}));
-//                 });
-//             });
-//         }, 1000);
-//     })
-// };
-
-// // DELETE REQUESTS
-// export const _deleteTodo = todoId => {
-//     return new Promise(resolve => {
-//         window.setTimeout(() => {
-//             fs.readFile(DB, "utf8", (err, data) => {
-//                 if (err) console.log(err);
-
-//                 const db = JSON.parse(data);
-//                 const newTodos = db.todosTable.filter(todo => todo.id !== todoId);
-//                 const newDB = JSON.stringify({ ...db, todosTable: newTodos }, null, 4);
-
-//                 fs.writeFile(DB, newDB, "utf8", err => {
-//                     if (err) console.log(err);
-
-//                     resolve(JSON.stringify({ status: 200, message: `todo with id: ${todoId} was deleted` }));
-//                 });
-//             });
-//         }, 1000);
-//     });
-// };
+export const _deleteTodo = todoId => {
+    return fetch(`/delete_todo/${todoId}`, {
+                method: "DELETE"
+            })
+            .then(readResponse)
+};

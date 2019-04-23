@@ -1,13 +1,9 @@
+import moment from "moment";
 import uuidv4 from "uuid/v4";
 import React, { Component } from "react";
+import { readResponse } from "../../helpers";
 
 import WeatherItem from "./WeatherItem";
-
-// Images
-import rain from "../../../img/rain.png"
-import sunny from "../../../img/sunny.png";
-import thunderWind from "../../../img/thunder-wind.png";
-import sunnyClouds from  "../../../img/sunny-clouds.png";
 
 const styles = {
     ul: `
@@ -15,20 +11,13 @@ const styles = {
         display: flex;
         overflow: hidden;
         grid-column: 1 / 5;
+        justify-content: space-between;
     `
 };
 
 class WeatherList extends Component {
     state = {
         weatherList: [
-            {
-                id: uuidv4(),
-                imageUrl: sunnyClouds,
-                altText: "partly cloudy",
-                low: "42",
-                high: "100",
-                date: "Today"
-            },
             {
                 id: uuidv4(),
                 imageUrl: sunny,
@@ -70,6 +59,42 @@ class WeatherList extends Component {
                 date: "April 16, 2019"
             }
         ]
+    };
+
+    componentDidMount() {
+        this.getIP()
+    }
+
+    getIP = () => {
+        fetch("https://api.ipify.org?format=json")
+            .then(readResponse)
+            .then(this.getLocationKey)
+    };
+
+    getLocationKey = ({ ip }) => {
+        fetch(`http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=KwDARgjJ91Ka7VuVLYvOShmZXUCctrhd&q=${ip}`)
+            .then(readResponse)
+            .then(this.getFiveDayForecast)
+    };
+
+    getFiveDayForecast = ({ Key })=> {
+        fetch(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${Key}?apikey=KwDARgjJ91Ka7VuVLYvOShmZXUCctrhd&details=true`)
+            .then(readResponse)
+            .then(this.createForecast)
+    };
+
+    createForecast = ({ DailyForecasts }) => {
+        const forecastObjects = DailyForecasts.map(forecast => {
+            return {
+                id: uuidv4(),
+                imageUrl: forecast.Day.Icon,
+                altText: forecast.Day.IconPhrase,
+                low: forecast.Temperature.Minimum.value,
+                high: forecast.Temperature.Maximum.value,
+                date: moment(forecast.Date).format("MMMM DD, YYYY")
+            };
+        });
+        this.setState({ weatherList: forecastObjects });
     };
 
     render() {

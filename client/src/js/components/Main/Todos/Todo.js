@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 import React, { Component } from "react";
 
-import timesSolid from "../../../img/times-solid.png";
+import timesSolid from "../../../../img/times-solid.png";
 
 const styles = {
     li: `
@@ -79,7 +79,13 @@ class Todo extends Component {
                         <a onClick={this.handleDeleteClick}><img css={styles.img} src={timesSolid} alt="delete" /></a>
                     </div>
                 </div>
-                <p css={styles.p} onClick={this.handleTodoClick}>{this.props.text}</p>
+                <p css={styles.p} onClick={this.handleTodoClick}>
+                    {
+                        !this.props.complete
+                            ? this.props.text
+                            : <s>{this.props.text}</s>
+                    }
+                </p>
             </li>
         );
     }

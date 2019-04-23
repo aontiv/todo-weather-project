@@ -53,7 +53,7 @@ const styles = {
         color: ${props => props.theme.primaryL};
 
         @media screen and (min-width: 37.5rem) {
-            font-size: 1.25rem;
+            font-size: 0.85rem;
         }
     `
 };

@@ -20,6 +20,7 @@ class TodoList extends Component {
                             id={todo.id}
                             timestamp={todo.timestamp}
                             text={todo.text}
+                            complete={todo.complete}
                             deleteTodo={this.props.deleteTodo}
                             toggleTodoComplete={this.props.toggleTodoComplete}
                         />

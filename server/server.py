@@ -86,5 +86,49 @@ def add_todo():
     db_json.close()
     return jsonify({ "status": 200, "message": "new todo with id: {} added".format(rq_data["id"]) })
 
+@app.route("/update_todo", methods=["UPDATE"])
+def update_todo():
+    rq_data = request.get_json()
+    db_json = open("./db/db.json", "r")
+    db_data = json.loads(db_json.read())
+
+    new_todos = []
+    for todo in db_data["todosTable"]:
+        if todo["id"] == rq_data["id"]:
+            new_todos.append(rq_data)
+        else:
+            new_todos.append(todo)
+    
+    db_data["todosTable"] = new_todos
+    db_json_new = json.dumps(db_data, indent=4)
+
+    new_db = open("./db/db.json", "w")
+    new_db.write(db_json_new)
+
+    new_db.close()
+    db_json.close()
+    return jsonify({ "status": 200, "message": "todo with id: {} updated".format(rq_data["id"])})
+
+@app.route("/delete_todo/<todo_id>", methods=["DELETE"])
+def delete_todo(todo_id):
+    db_json = open("./db/db.json", "r")
+    db_data = json.loads(db_json.read())
+
+    new_todos = []
+    for todo in db_data["todosTable"]:
+        if todo["id"] != todo_id:
+            new_todos.append(todo)
+    
+    db_data["todosTable"] = new_todos
+    db_json_new = json.dumps(db_data, indent=4)
+
+    new_db = open("./db/db.json", "w")
+    new_db.write(db_json_new)
+
+    new_db.close()
+    db_json.close()
+    return jsonify({ "status": 200, "message": "todo with id: {} was deleted".format(todo_id) })
+
 if __name__ == "__main__":
+    app.env = "development"
     app.run(debug=True)

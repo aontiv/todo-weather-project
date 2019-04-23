@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
 import Authorize from "./Authorize";
-import TodoContainer from "./TodoContainer";
+import TodoContainer from "../Todos/TodoContainer";
 
 class AuthorizationSwitcher extends Component {
     render() {

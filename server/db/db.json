@@ -18,13 +18,6 @@
     ],
     "todosTable": [
         {
-            "id": "1",
-            "timestamp": "April 01, 2019 01:01:01 AM",
-            "text": "Todo text",
-            "complete": false,
-            "userId": "1"
-        },
-        {
             "id": "2",
             "timestamp": "April 02, 2019 01:01:01 AM",
             "text": "Todo text",
@@ -37,6 +30,13 @@
             "text": "Todo text",
             "complete": false,
             "userId": "3"
+        },
+        {
+            "id": "986cd4f3-fb64-4237-8065-8f1f39a6e20b",
+            "timestamp": "April 22, 2019 12:11:31 PM",
+            "text": "Walk the dog",
+            "complete": true,
+            "userId": "1"
         }
     ]
 }

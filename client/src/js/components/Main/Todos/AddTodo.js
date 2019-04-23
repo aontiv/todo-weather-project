@@ -27,9 +27,9 @@ const styles = {
         background-color: #f1f1f1;
 
         @media screen and (min-width: 37.5rem) {
-            height: 2.75rem;
+            height: 2.5rem;
             padding: 0.625rem;
-            font-size: 1.75rem;
+            font-size: 1.25rem;
         }
     `,
     button: css`
@@ -46,8 +46,8 @@ const styles = {
         }
 
         @media screen and (min-width: 37.5rem) {
-            height: 2.75rem;
-            font-size: 1.75rem;
+            height: 2.5rem;
+            font-size: 1.25rem;
         }
     `
 };

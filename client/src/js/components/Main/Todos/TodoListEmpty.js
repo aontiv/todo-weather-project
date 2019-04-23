@@ -9,7 +9,7 @@ const styles = {
     `,
     span: `
         @media screen and (min-width: 60rem) {
-            font-size: 1.75rem;
+            font-size: 1.25rem;
         }
     `
 };
