@@ -5,8 +5,8 @@ module.exports = {
     entry: "./src/js/main.js",
     output: {
         filename: "bundle.js",
-        publicPath: "/static/",
-        path: path.resolve(__dirname, "../server/dist/static")
+        publicPath: "/static/js/",
+        path: path.resolve(__dirname, "../server/dist/static/js")
     },
     module: {
         rules: [
@@ -18,17 +18,19 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|jpeg)$/,
-                use: "file-loader"
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: { outputPath: "../media/" }
+                    }
+                ]
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            filename: "../index.html",
+            filename: "../../index.html",
             template: "./src/index.html",
         })
-    ],
-    node: {
-        fs: "empty"
-    }
+    ]
 }

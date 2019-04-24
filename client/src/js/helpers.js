@@ -1,7 +1,7 @@
 import moment from "moment";
 
 export const getFormattedTime = () => {
-    return moment().format("MMMM DD, YYYY hh:mm:ss A");
+    return moment(new Date()).format("MMMM DD, YYYY hh:mm:ss A");
 };
 
 export const readResponse = response => {

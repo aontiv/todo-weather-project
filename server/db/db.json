@@ -1,42 +1,10 @@
 {
     "usersTable": [
         {
-            "id": "1",
+            "id": "942d6ae4-2ce2-4964-b284-13ec68fd5fea",
             "username": "testuser1",
             "password": "password1"
-        },
-        {
-            "id": "2",
-            "username": "testuser2",
-            "password": "password2"
-        },
-        {
-            "id": "3",
-            "username": "testuser3",
-            "password": "password3"
         }
     ],
-    "todosTable": [
-        {
-            "id": "2",
-            "timestamp": "April 02, 2019 01:01:01 AM",
-            "text": "Todo text",
-            "complete": false,
-            "userId": "2"
-        },
-        {
-            "id": "3",
-            "timestamp": "April 03, 2019 01:01:01 AM",
-            "text": "Todo text",
-            "complete": false,
-            "userId": "3"
-        },
-        {
-            "id": "986cd4f3-fb64-4237-8065-8f1f39a6e20b",
-            "timestamp": "April 22, 2019 12:11:31 PM",
-            "text": "Walk the dog",
-            "complete": true,
-            "userId": "1"
-        }
-    ]
+    "todosTable": []
 }

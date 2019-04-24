@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/static/";
+/******/ 	__webpack_require__.p = "/static/js/";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -1684,17 +1684,6 @@ eval("/* WEBPACK VAR INJECTION */(function(module) {var require;//! moment.js\n\
 
 /***/ }),
 
-/***/ "./node_modules/node-libs-browser/mock/empty.js":
-/*!******************************************************!*\
-  !*** ./node_modules/node-libs-browser/mock/empty.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("\n\n//# sourceURL=webpack:///./node_modules/node-libs-browser/mock/empty.js?");
-
-/***/ }),
-
 /***/ "./node_modules/object-assign/index.js":
 /*!*********************************************!*\
   !*** ./node_modules/object-assign/index.js ***!
@@ -2068,47 +2057,454 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 
 /***/ }),
 
-/***/ "./src/img/rain.png":
-/*!**************************!*\
-  !*** ./src/img/rain.png ***!
-  \**************************/
+/***/ "./src/img sync \\.png$":
+/*!******************************************!*\
+  !*** ./src/img sync nonrecursive \.png$ ***!
+  \******************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/file-loader/dist/cjs.js):\\nError: ENOENT: no such file or directory, open 'C:\\\\Users\\\\aonti\\\\Desktop\\\\todo-weather-project\\\\client\\\\src\\\\img\\\\rain.png'\");\n\n//# sourceURL=webpack:///./src/img/rain.png?");
+eval("var map = {\n\t\"./1.png\": \"./src/img/1.png\",\n\t\"./11.png\": \"./src/img/11.png\",\n\t\"./12.png\": \"./src/img/12.png\",\n\t\"./13.png\": \"./src/img/13.png\",\n\t\"./14.png\": \"./src/img/14.png\",\n\t\"./15.png\": \"./src/img/15.png\",\n\t\"./16.png\": \"./src/img/16.png\",\n\t\"./17.png\": \"./src/img/17.png\",\n\t\"./18.png\": \"./src/img/18.png\",\n\t\"./19.png\": \"./src/img/19.png\",\n\t\"./2.png\": \"./src/img/2.png\",\n\t\"./20.png\": \"./src/img/20.png\",\n\t\"./21.png\": \"./src/img/21.png\",\n\t\"./22.png\": \"./src/img/22.png\",\n\t\"./23.png\": \"./src/img/23.png\",\n\t\"./24.png\": \"./src/img/24.png\",\n\t\"./25.png\": \"./src/img/25.png\",\n\t\"./26.png\": \"./src/img/26.png\",\n\t\"./29.png\": \"./src/img/29.png\",\n\t\"./3.png\": \"./src/img/3.png\",\n\t\"./30.png\": \"./src/img/30.png\",\n\t\"./31.png\": \"./src/img/31.png\",\n\t\"./32.png\": \"./src/img/32.png\",\n\t\"./33.png\": \"./src/img/33.png\",\n\t\"./34.png\": \"./src/img/34.png\",\n\t\"./35.png\": \"./src/img/35.png\",\n\t\"./36.png\": \"./src/img/36.png\",\n\t\"./37.png\": \"./src/img/37.png\",\n\t\"./38.png\": \"./src/img/38.png\",\n\t\"./39.png\": \"./src/img/39.png\",\n\t\"./4.png\": \"./src/img/4.png\",\n\t\"./40.png\": \"./src/img/40.png\",\n\t\"./41.png\": \"./src/img/41.png\",\n\t\"./42.png\": \"./src/img/42.png\",\n\t\"./43.png\": \"./src/img/43.png\",\n\t\"./44.png\": \"./src/img/44.png\",\n\t\"./5.png\": \"./src/img/5.png\",\n\t\"./6.png\": \"./src/img/6.png\",\n\t\"./7.png\": \"./src/img/7.png\",\n\t\"./8.png\": \"./src/img/8.png\",\n\t\"./times-solid.png\": \"./src/img/times-solid.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/img sync \\\\.png$\";\n\n//# sourceURL=webpack:///./src/img_sync_nonrecursive_\\.png$?");
 
 /***/ }),
 
-/***/ "./src/img/sunny-clouds.png":
-/*!**********************************!*\
-  !*** ./src/img/sunny-clouds.png ***!
-  \**********************************/
+/***/ "./src/img/1.png":
+/*!***********************!*\
+  !*** ./src/img/1.png ***!
+  \***********************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/file-loader/dist/cjs.js):\\nError: ENOENT: no such file or directory, open 'C:\\\\Users\\\\aonti\\\\Desktop\\\\todo-weather-project\\\\client\\\\src\\\\img\\\\sunny-clouds.png'\");\n\n//# sourceURL=webpack:///./src/img/sunny-clouds.png?");
+eval("module.exports = __webpack_require__.p + \"../media/070dfbcb019fd6cacecbc690e081fec2.png\";\n\n//# sourceURL=webpack:///./src/img/1.png?");
 
 /***/ }),
 
-/***/ "./src/img/sunny.png":
-/*!***************************!*\
-  !*** ./src/img/sunny.png ***!
-  \***************************/
+/***/ "./src/img/11.png":
+/*!************************!*\
+  !*** ./src/img/11.png ***!
+  \************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/file-loader/dist/cjs.js):\\nError: ENOENT: no such file or directory, open 'C:\\\\Users\\\\aonti\\\\Desktop\\\\todo-weather-project\\\\client\\\\src\\\\img\\\\sunny.png'\");\n\n//# sourceURL=webpack:///./src/img/sunny.png?");
+eval("module.exports = __webpack_require__.p + \"../media/9e348225bd4052c0c7cd0313a3ea9a3b.png\";\n\n//# sourceURL=webpack:///./src/img/11.png?");
 
 /***/ }),
 
-/***/ "./src/img/thunder-wind.png":
-/*!**********************************!*\
-  !*** ./src/img/thunder-wind.png ***!
-  \**********************************/
+/***/ "./src/img/12.png":
+/*!************************!*\
+  !*** ./src/img/12.png ***!
+  \************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/file-loader/dist/cjs.js):\\nError: ENOENT: no such file or directory, open 'C:\\\\Users\\\\aonti\\\\Desktop\\\\todo-weather-project\\\\client\\\\src\\\\img\\\\thunder-wind.png'\");\n\n//# sourceURL=webpack:///./src/img/thunder-wind.png?");
+eval("module.exports = __webpack_require__.p + \"../media/2c0e02fc6ebf0176aa6efc7e8a5bcfc0.png\";\n\n//# sourceURL=webpack:///./src/img/12.png?");
+
+/***/ }),
+
+/***/ "./src/img/13.png":
+/*!************************!*\
+  !*** ./src/img/13.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/65b489d77889bba2ab385300e0fc59e8.png\";\n\n//# sourceURL=webpack:///./src/img/13.png?");
+
+/***/ }),
+
+/***/ "./src/img/14.png":
+/*!************************!*\
+  !*** ./src/img/14.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/3ee93e99fc648ab6e75ba4a2de9531ce.png\";\n\n//# sourceURL=webpack:///./src/img/14.png?");
+
+/***/ }),
+
+/***/ "./src/img/15.png":
+/*!************************!*\
+  !*** ./src/img/15.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/39ac499c2a7856b24ffe3ffde4c8cc61.png\";\n\n//# sourceURL=webpack:///./src/img/15.png?");
+
+/***/ }),
+
+/***/ "./src/img/16.png":
+/*!************************!*\
+  !*** ./src/img/16.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/0cf9cad1347244da8a9e197998e0eff9.png\";\n\n//# sourceURL=webpack:///./src/img/16.png?");
+
+/***/ }),
+
+/***/ "./src/img/17.png":
+/*!************************!*\
+  !*** ./src/img/17.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/3c85da3e400a073c51b3ea73bdf5a130.png\";\n\n//# sourceURL=webpack:///./src/img/17.png?");
+
+/***/ }),
+
+/***/ "./src/img/18.png":
+/*!************************!*\
+  !*** ./src/img/18.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/e137094c454155b04b2c026701de5d17.png\";\n\n//# sourceURL=webpack:///./src/img/18.png?");
+
+/***/ }),
+
+/***/ "./src/img/19.png":
+/*!************************!*\
+  !*** ./src/img/19.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/9b15c0ec6e6071bae9355fb44c2c8168.png\";\n\n//# sourceURL=webpack:///./src/img/19.png?");
+
+/***/ }),
+
+/***/ "./src/img/2.png":
+/*!***********************!*\
+  !*** ./src/img/2.png ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/c3d2ceb6d28dd6c9142207c00e8d4a3b.png\";\n\n//# sourceURL=webpack:///./src/img/2.png?");
+
+/***/ }),
+
+/***/ "./src/img/20.png":
+/*!************************!*\
+  !*** ./src/img/20.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/d470da7a204be0dcd8a66833296be939.png\";\n\n//# sourceURL=webpack:///./src/img/20.png?");
+
+/***/ }),
+
+/***/ "./src/img/21.png":
+/*!************************!*\
+  !*** ./src/img/21.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/33bf28d29eeaed455dfe056680a44eff.png\";\n\n//# sourceURL=webpack:///./src/img/21.png?");
+
+/***/ }),
+
+/***/ "./src/img/22.png":
+/*!************************!*\
+  !*** ./src/img/22.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/bbff7c5478e6670f5c1862b5991e5ac4.png\";\n\n//# sourceURL=webpack:///./src/img/22.png?");
+
+/***/ }),
+
+/***/ "./src/img/23.png":
+/*!************************!*\
+  !*** ./src/img/23.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/34bc4a04c6d1afc9f9da5795c8770bd3.png\";\n\n//# sourceURL=webpack:///./src/img/23.png?");
+
+/***/ }),
+
+/***/ "./src/img/24.png":
+/*!************************!*\
+  !*** ./src/img/24.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/52e2d6d1df4c763278b681de0326e2b3.png\";\n\n//# sourceURL=webpack:///./src/img/24.png?");
+
+/***/ }),
+
+/***/ "./src/img/25.png":
+/*!************************!*\
+  !*** ./src/img/25.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/7deafc17e3aff9925608c72a9be202f4.png\";\n\n//# sourceURL=webpack:///./src/img/25.png?");
+
+/***/ }),
+
+/***/ "./src/img/26.png":
+/*!************************!*\
+  !*** ./src/img/26.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/e3ba967b5c250a5e3aea364440a61d54.png\";\n\n//# sourceURL=webpack:///./src/img/26.png?");
+
+/***/ }),
+
+/***/ "./src/img/29.png":
+/*!************************!*\
+  !*** ./src/img/29.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/f90eaac33ef27de5df3cfa05859d924d.png\";\n\n//# sourceURL=webpack:///./src/img/29.png?");
+
+/***/ }),
+
+/***/ "./src/img/3.png":
+/*!***********************!*\
+  !*** ./src/img/3.png ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/b9c78cdd8226cec4fcad8d7f4135bb6a.png\";\n\n//# sourceURL=webpack:///./src/img/3.png?");
+
+/***/ }),
+
+/***/ "./src/img/30.png":
+/*!************************!*\
+  !*** ./src/img/30.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/6192b81b18dba4c29fcd9af27c86579c.png\";\n\n//# sourceURL=webpack:///./src/img/30.png?");
+
+/***/ }),
+
+/***/ "./src/img/31.png":
+/*!************************!*\
+  !*** ./src/img/31.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/a17facf2b649463905b92adde26ad2f0.png\";\n\n//# sourceURL=webpack:///./src/img/31.png?");
+
+/***/ }),
+
+/***/ "./src/img/32.png":
+/*!************************!*\
+  !*** ./src/img/32.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/1ae14924a7fafae20801e861905c66c3.png\";\n\n//# sourceURL=webpack:///./src/img/32.png?");
+
+/***/ }),
+
+/***/ "./src/img/33.png":
+/*!************************!*\
+  !*** ./src/img/33.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/c07e50cd816e950d8dcf59fbc9e569bd.png\";\n\n//# sourceURL=webpack:///./src/img/33.png?");
+
+/***/ }),
+
+/***/ "./src/img/34.png":
+/*!************************!*\
+  !*** ./src/img/34.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/c2937d31d1e2450ed3d3c36764acd448.png\";\n\n//# sourceURL=webpack:///./src/img/34.png?");
+
+/***/ }),
+
+/***/ "./src/img/35.png":
+/*!************************!*\
+  !*** ./src/img/35.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/5142d3ff2eea7f105b1c4e308ad71cd2.png\";\n\n//# sourceURL=webpack:///./src/img/35.png?");
+
+/***/ }),
+
+/***/ "./src/img/36.png":
+/*!************************!*\
+  !*** ./src/img/36.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/09fc2e38622b563ef0c8230c8fc7ee08.png\";\n\n//# sourceURL=webpack:///./src/img/36.png?");
+
+/***/ }),
+
+/***/ "./src/img/37.png":
+/*!************************!*\
+  !*** ./src/img/37.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/c6d3e181e86d3e153dcb5e1d9977db9d.png\";\n\n//# sourceURL=webpack:///./src/img/37.png?");
+
+/***/ }),
+
+/***/ "./src/img/38.png":
+/*!************************!*\
+  !*** ./src/img/38.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/c6858ec0af0924bf4efbe30100ce2333.png\";\n\n//# sourceURL=webpack:///./src/img/38.png?");
+
+/***/ }),
+
+/***/ "./src/img/39.png":
+/*!************************!*\
+  !*** ./src/img/39.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/ac121ab98e22f2e55f502eae9c86e78a.png\";\n\n//# sourceURL=webpack:///./src/img/39.png?");
+
+/***/ }),
+
+/***/ "./src/img/4.png":
+/*!***********************!*\
+  !*** ./src/img/4.png ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/ad653b5069322da3868cfa15956dd9a3.png\";\n\n//# sourceURL=webpack:///./src/img/4.png?");
+
+/***/ }),
+
+/***/ "./src/img/40.png":
+/*!************************!*\
+  !*** ./src/img/40.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/b6b005f110ac7278cabc1c5275e5df63.png\";\n\n//# sourceURL=webpack:///./src/img/40.png?");
+
+/***/ }),
+
+/***/ "./src/img/41.png":
+/*!************************!*\
+  !*** ./src/img/41.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/421c13f1b1eb0ae947bb64472fec6baa.png\";\n\n//# sourceURL=webpack:///./src/img/41.png?");
+
+/***/ }),
+
+/***/ "./src/img/42.png":
+/*!************************!*\
+  !*** ./src/img/42.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/3643cbcd7724867b1aa205ec245d4036.png\";\n\n//# sourceURL=webpack:///./src/img/42.png?");
+
+/***/ }),
+
+/***/ "./src/img/43.png":
+/*!************************!*\
+  !*** ./src/img/43.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/78a3dc91adcc4f1687e6ac91bf42c2ee.png\";\n\n//# sourceURL=webpack:///./src/img/43.png?");
+
+/***/ }),
+
+/***/ "./src/img/44.png":
+/*!************************!*\
+  !*** ./src/img/44.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/3999edd1ff74bad249b62c13289d935a.png\";\n\n//# sourceURL=webpack:///./src/img/44.png?");
+
+/***/ }),
+
+/***/ "./src/img/5.png":
+/*!***********************!*\
+  !*** ./src/img/5.png ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/9ae0013c86ab26a4eb73b5a0cbe9f3fc.png\";\n\n//# sourceURL=webpack:///./src/img/5.png?");
+
+/***/ }),
+
+/***/ "./src/img/6.png":
+/*!***********************!*\
+  !*** ./src/img/6.png ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/407b0eeda43583f02a2f6c5cd295d82b.png\";\n\n//# sourceURL=webpack:///./src/img/6.png?");
+
+/***/ }),
+
+/***/ "./src/img/7.png":
+/*!***********************!*\
+  !*** ./src/img/7.png ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/39d46f7fc31cc0c6a7bb93b5ecf2c867.png\";\n\n//# sourceURL=webpack:///./src/img/7.png?");
+
+/***/ }),
+
+/***/ "./src/img/8.png":
+/*!***********************!*\
+  !*** ./src/img/8.png ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../media/90d416bb4b01d6f08c7c44e8942fd491.png\";\n\n//# sourceURL=webpack:///./src/img/8.png?");
 
 /***/ }),
 
@@ -2119,7 +2515,19 @@ eval("throw new Error(\"Module build failed (from ./node_modules/file-loader/dis
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"2aaef971bb5c7e7b5d9fb09d8b754ae1.png\";\n\n//# sourceURL=webpack:///./src/img/times-solid.png?");
+eval("module.exports = __webpack_require__.p + \"../media/2aaef971bb5c7e7b5d9fb09d8b754ae1.png\";\n\n//# sourceURL=webpack:///./src/img/times-solid.png?");
+
+/***/ }),
+
+/***/ "./src/js/SECRET_KEY.js":
+/*!******************************!*\
+  !*** ./src/js/SECRET_KEY.js ***!
+  \******************************/
+/*! exports provided: SECRET_KEY */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"SECRET_KEY\", function() { return SECRET_KEY; });\nvar SECRET_KEY = \"KwDARgjJ91Ka7VuVLYvOShmZXUCctrhd\";\n\n//# sourceURL=webpack:///./src/js/SECRET_KEY.js?");
 
 /***/ }),
 
@@ -2127,11 +2535,11 @@ eval("module.exports = __webpack_require__.p + \"2aaef971bb5c7e7b5d9fb09d8b754ae
 /*!******************************!*\
   !*** ./src/js/client-api.js ***!
   \******************************/
-/*! exports provided: _login, _getUserTodos, _addUser, _addTodo, _updateTodo, _deleteTodo */
+/*! exports provided: _login, _getUserTodos, _addUser, _addTodo, _updateTodo, _deleteTodo, _getWeatherForecast */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"_login\", function() { return _login; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"_getUserTodos\", function() { return _getUserTodos; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"_addUser\", function() { return _addUser; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"_addTodo\", function() { return _addTodo; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"_updateTodo\", function() { return _updateTodo; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"_deleteTodo\", function() { return _deleteTodo; });\n/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers */ \"./src/js/helpers.js\");\n\n\nvar fs = __webpack_require__(/*! fs */ \"./node_modules/node-libs-browser/mock/empty.js\");\n\nvar _login = function _login(user) {\n  return fetch(\"/login\", {\n    method: \"POST\",\n    body: Object(_helpers__WEBPACK_IMPORTED_MODULE_0__[\"jsonify\"])(user),\n    headers: {\n      \"Content-Type\": \"application/json\"\n    }\n  }).then(_helpers__WEBPACK_IMPORTED_MODULE_0__[\"readResponse\"]);\n};\nvar _getUserTodos = function _getUserTodos(userId) {\n  return fetch(\"/get_todos/\".concat(userId)).then(_helpers__WEBPACK_IMPORTED_MODULE_0__[\"readResponse\"]);\n};\nvar _addUser = function _addUser(user) {\n  return fetch(\"/add_user\", {\n    method: \"POST\",\n    headers: {\n      \"Content-Type\": \"application/json\"\n    },\n    body: Object(_helpers__WEBPACK_IMPORTED_MODULE_0__[\"jsonify\"])(user)\n  }).then(_helpers__WEBPACK_IMPORTED_MODULE_0__[\"readResponse\"]);\n};\nvar _addTodo = function _addTodo(todo) {\n  return fetch(\"/add_todo\", {\n    method: \"POST\",\n    headers: {\n      \"Content-Type\": \"application/json\"\n    },\n    body: Object(_helpers__WEBPACK_IMPORTED_MODULE_0__[\"jsonify\"])(todo)\n  }).then(_helpers__WEBPACK_IMPORTED_MODULE_0__[\"readResponse\"]);\n};\nvar _updateTodo = function _updateTodo(id, todos) {\n  var newTodo = todos.filter(function (todo) {\n    return todo.id === id;\n  })[0];\n  return fetch(\"/update_todo\", {\n    method: \"UPDATE\",\n    headers: {\n      \"Content-Type\": \"application/json\"\n    },\n    body: Object(_helpers__WEBPACK_IMPORTED_MODULE_0__[\"jsonify\"])(newTodo)\n  }).then(_helpers__WEBPACK_IMPORTED_MODULE_0__[\"readResponse\"]);\n};\nvar _deleteTodo = function _deleteTodo(todoId) {\n  return fetch(\"/delete_todo/\".concat(todoId), {\n    method: \"DELETE\"\n  }).then(_helpers__WEBPACK_IMPORTED_MODULE_0__[\"readResponse\"]);\n};\n\n//# sourceURL=webpack:///./src/js/client-api.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"_login\", function() { return _login; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"_getUserTodos\", function() { return _getUserTodos; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"_addUser\", function() { return _addUser; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"_addTodo\", function() { return _addTodo; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"_updateTodo\", function() { return _updateTodo; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"_deleteTodo\", function() { return _deleteTodo; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"_getWeatherForecast\", function() { return _getWeatherForecast; });\n/* harmony import */ var _SECRET_KEY__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SECRET_KEY */ \"./src/js/SECRET_KEY.js\");\n/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers */ \"./src/js/helpers.js\");\n\n // Server API\n\nvar _login = function _login(user) {\n  return fetch(\"/login\", {\n    method: \"POST\",\n    body: Object(_helpers__WEBPACK_IMPORTED_MODULE_1__[\"jsonify\"])(user),\n    headers: {\n      \"Content-Type\": \"application/json\"\n    }\n  }).then(_helpers__WEBPACK_IMPORTED_MODULE_1__[\"readResponse\"]);\n};\nvar _getUserTodos = function _getUserTodos(userId) {\n  return fetch(\"/get_todos/\".concat(userId)).then(_helpers__WEBPACK_IMPORTED_MODULE_1__[\"readResponse\"]);\n};\nvar _addUser = function _addUser(user) {\n  return fetch(\"/add_user\", {\n    method: \"POST\",\n    headers: {\n      \"Content-Type\": \"application/json\"\n    },\n    body: Object(_helpers__WEBPACK_IMPORTED_MODULE_1__[\"jsonify\"])(user)\n  }).then(_helpers__WEBPACK_IMPORTED_MODULE_1__[\"readResponse\"]);\n};\nvar _addTodo = function _addTodo(todo) {\n  return fetch(\"/add_todo\", {\n    method: \"POST\",\n    headers: {\n      \"Content-Type\": \"application/json\"\n    },\n    body: Object(_helpers__WEBPACK_IMPORTED_MODULE_1__[\"jsonify\"])(todo)\n  }).then(_helpers__WEBPACK_IMPORTED_MODULE_1__[\"readResponse\"]);\n};\nvar _updateTodo = function _updateTodo(id, todos) {\n  var newTodo = todos.filter(function (todo) {\n    return todo.id === id;\n  })[0];\n  return fetch(\"/update_todo\", {\n    method: \"UPDATE\",\n    headers: {\n      \"Content-Type\": \"application/json\"\n    },\n    body: Object(_helpers__WEBPACK_IMPORTED_MODULE_1__[\"jsonify\"])(newTodo)\n  }).then(_helpers__WEBPACK_IMPORTED_MODULE_1__[\"readResponse\"]);\n};\nvar _deleteTodo = function _deleteTodo(todoId) {\n  return fetch(\"/delete_todo/\".concat(todoId), {\n    method: \"DELETE\"\n  }).then(_helpers__WEBPACK_IMPORTED_MODULE_1__[\"readResponse\"]);\n}; // Accuweather API\n\nvar _getWeatherForecast = function _getWeatherForecast() {\n  return _getIP();\n};\n\nvar _getIP = function _getIP() {\n  return fetch(\"https://api.ipify.org?format=json\").then(_helpers__WEBPACK_IMPORTED_MODULE_1__[\"readResponse\"]).then(_getLocationKey);\n};\n\nvar _getLocationKey = function _getLocationKey(_ref) {\n  var ip = _ref.ip;\n  return fetch(\"http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=\".concat(_SECRET_KEY__WEBPACK_IMPORTED_MODULE_0__[\"SECRET_KEY\"], \"&q=\").concat(ip)).then(_helpers__WEBPACK_IMPORTED_MODULE_1__[\"readResponse\"]).then(_getFiveDayForecast);\n};\n\nvar _getFiveDayForecast = function _getFiveDayForecast(_ref2) {\n  var Key = _ref2.Key;\n  return fetch(\"http://dataservice.accuweather.com/forecasts/v1/daily/5day/\".concat(Key, \"?apikey=\").concat(_SECRET_KEY__WEBPACK_IMPORTED_MODULE_0__[\"SECRET_KEY\"], \"&details=true\")).then(_helpers__WEBPACK_IMPORTED_MODULE_1__[\"readResponse\"]);\n};\n\n//# sourceURL=webpack:///./src/js/client-api.js?");
 
 /***/ }),
 
@@ -2287,7 +2695,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ \"./node_modules/styled-components/dist/styled-components.browser.esm.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\nfunction _templateObject5() {\n  var data = _taggedTemplateLiteral([\"\", \"\"]);\n\n  _templateObject5 = function _templateObject5() {\n    return data;\n  };\n\n  return data;\n}\n\nfunction _templateObject4() {\n  var data = _taggedTemplateLiteral([\"\", \"\"]);\n\n  _templateObject4 = function _templateObject4() {\n    return data;\n  };\n\n  return data;\n}\n\nfunction _templateObject3() {\n  var data = _taggedTemplateLiteral([\"\", \"\"]);\n\n  _templateObject3 = function _templateObject3() {\n    return data;\n  };\n\n  return data;\n}\n\nfunction _templateObject2() {\n  var data = _taggedTemplateLiteral([\"\", \"\"]);\n\n  _templateObject2 = function _templateObject2() {\n    return data;\n  };\n\n  return data;\n}\n\nfunction _templateObject() {\n  var data = _taggedTemplateLiteral([\"\", \"\"]);\n\n  _templateObject = function _templateObject() {\n    return data;\n  };\n\n  return data;\n}\n\nfunction _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }\n\n\n\n\n\n\n\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\n\n\nvar styles = {\n  tile: \"\\n        display: flex;\\n        width: 6.0625rem;\\n        height: 8.4375rem;\\n        align-items: center;\\n        justify-content: center;\\n        flex-flow: column nowrap;\\n        border-radius: 0.3125rem;\\n        margin-bottom: 0.3125rem;\\n        box-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.25);\\n\\n        @media screen and (min-width: 37.5rem) {\\n            width: 9.375rem;\\n            height: 13.4375rem;\\n            margin-bottom: 0.625rem;\\n        }\\n\\n        @media screen and (min-width: 60rem) {\\n            width: 8.5rem;\\n            height: 12.5625rem;\\n        }\\n    \",\n  li: \"\\n        margin-right: 1.15rem;\\n\\n        :last-child {\\n            margin-right: 0;\\n        }\\n    \",\n  img: \"\\n        width: 4.6875rem;\\n        margin-bottom: 1rem;\\n\\n        @media screen and (min-width: 37.5rem) {\\n            width: 7.5rem;\\n            margin-bottom: 1.5rem;\\n        }\\n    \",\n  temp: \"\\n        font-size: 0.75rem;\\n\\n        @media screen and (min-width: 37.5rem) {\\n            font-size: 1.25rem;\\n        }\\n    \",\n  date: Object(styled_components__WEBPACK_IMPORTED_MODULE_0__[\"css\"])([\"text-align:center;font-size:0.75rem;color:\", \";@media screen and (min-width:37.5rem){font-size:1.25rem;}\"], function (props) {\n    return props.theme.primaryL;\n  })\n};\n\nvar WeatherItem =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(WeatherItem, _Component);\n\n  function WeatherItem() {\n    _classCallCheck(this, WeatherItem);\n\n    return _possibleConstructorReturn(this, _getPrototypeOf(WeatherItem).apply(this, arguments));\n  }\n\n  _createClass(WeatherItem, [{\n    key: \"render\",\n    value: function render() {\n      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_StyledLi, {\n        _css: styles.li\n      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_StyledDiv, {\n        _css2: styles.tile\n      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_StyledImg, {\n        src: this.props.imageUrl,\n        alt: this.props.altText,\n        _css3: styles.img\n      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_StyledSpan, {\n        _css4: styles.temp\n      }, this.props.low + \"\\xB0\" + \" F\", \" - \", this.props.high + \"\\xB0\" + \" F\")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_StyledP, {\n        _css5: styles.date\n      }, this.props.date));\n    }\n  }]);\n\n  return WeatherItem;\n}(react__WEBPACK_IMPORTED_MODULE_1__[\"Component\"]);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (WeatherItem);\n\nvar _StyledLi = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"li\")(_templateObject(), function (p) {\n  return p._css;\n});\n\nvar _StyledDiv = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"div\")(_templateObject2(), function (p) {\n  return p._css2;\n});\n\nvar _StyledImg = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"img\")(_templateObject3(), function (p) {\n  return p._css3;\n});\n\nvar _StyledSpan = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"span\")(_templateObject4(), function (p) {\n  return p._css4;\n});\n\nvar _StyledP = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"p\")(_templateObject5(), function (p) {\n  return p._css5;\n});\n\n//# sourceURL=webpack:///./src/js/components/WeatherList/WeatherItem.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ \"./node_modules/styled-components/dist/styled-components.browser.esm.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\nfunction _templateObject5() {\n  var data = _taggedTemplateLiteral([\"\", \"\"]);\n\n  _templateObject5 = function _templateObject5() {\n    return data;\n  };\n\n  return data;\n}\n\nfunction _templateObject4() {\n  var data = _taggedTemplateLiteral([\"\", \"\"]);\n\n  _templateObject4 = function _templateObject4() {\n    return data;\n  };\n\n  return data;\n}\n\nfunction _templateObject3() {\n  var data = _taggedTemplateLiteral([\"\", \"\"]);\n\n  _templateObject3 = function _templateObject3() {\n    return data;\n  };\n\n  return data;\n}\n\nfunction _templateObject2() {\n  var data = _taggedTemplateLiteral([\"\", \"\"]);\n\n  _templateObject2 = function _templateObject2() {\n    return data;\n  };\n\n  return data;\n}\n\nfunction _templateObject() {\n  var data = _taggedTemplateLiteral([\"\", \"\"]);\n\n  _templateObject = function _templateObject() {\n    return data;\n  };\n\n  return data;\n}\n\nfunction _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }\n\n\n\n\n\n\n\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\n\n\nvar styles = {\n  tile: \"\\n        display: flex;\\n        width: 6.0625rem;\\n        height: 8.4375rem;\\n        align-items: center;\\n        justify-content: center;\\n        flex-flow: column nowrap;\\n        border-radius: 0.3125rem;\\n        margin-bottom: 0.3125rem;\\n        box-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.25);\\n\\n        @media screen and (min-width: 37.5rem) {\\n            width: 9.375rem;\\n            height: 13.4375rem;\\n            margin-bottom: 0.625rem;\\n        }\\n\\n        @media screen and (min-width: 60rem) {\\n            width: 8.5rem;\\n            height: 12.5625rem;\\n        }\\n    \",\n  li: \"\\n        margin-right: 1.15rem;\\n\\n        :last-child {\\n            margin-right: 0;\\n        }\\n    \",\n  img: \"\\n        width: 4.6875rem;\\n        margin-bottom: 1rem;\\n\\n        @media screen and (min-width: 37.5rem) {\\n            width: 7.5rem;\\n            margin-bottom: 1.5rem;\\n        }\\n    \",\n  temp: \"\\n        font-size: 0.75rem;\\n\\n        @media screen and (min-width: 37.5rem) {\\n            font-size: 1.25rem;\\n        }\\n    \",\n  date: Object(styled_components__WEBPACK_IMPORTED_MODULE_0__[\"css\"])([\"text-align:center;font-size:0.75rem;color:\", \";@media screen and (min-width:37.5rem){font-size:0.85rem;}\"], function (props) {\n    return props.theme.primaryL;\n  })\n};\n\nvar WeatherItem =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(WeatherItem, _Component);\n\n  function WeatherItem() {\n    _classCallCheck(this, WeatherItem);\n\n    return _possibleConstructorReturn(this, _getPrototypeOf(WeatherItem).apply(this, arguments));\n  }\n\n  _createClass(WeatherItem, [{\n    key: \"render\",\n    value: function render() {\n      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_StyledLi, {\n        _css: styles.li\n      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_StyledDiv, {\n        _css2: styles.tile\n      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_StyledImg, {\n        src: this.props.imageUrl,\n        alt: this.props.altText,\n        _css3: styles.img\n      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_StyledSpan, {\n        _css4: styles.temp\n      }, this.props.low + \"\\xB0\" + \" F\", \" - \", this.props.high + \"\\xB0\" + \" F\")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_StyledP, {\n        _css5: styles.date\n      }, this.props.date));\n    }\n  }]);\n\n  return WeatherItem;\n}(react__WEBPACK_IMPORTED_MODULE_1__[\"Component\"]);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (WeatherItem);\n\nvar _StyledLi = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"li\")(_templateObject(), function (p) {\n  return p._css;\n});\n\nvar _StyledDiv = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"div\")(_templateObject2(), function (p) {\n  return p._css2;\n});\n\nvar _StyledImg = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"img\")(_templateObject3(), function (p) {\n  return p._css3;\n});\n\nvar _StyledSpan = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"span\")(_templateObject4(), function (p) {\n  return p._css4;\n});\n\nvar _StyledP = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"p\")(_templateObject5(), function (p) {\n  return p._css5;\n});\n\n//# sourceURL=webpack:///./src/js/components/WeatherList/WeatherItem.js?");
 
 /***/ }),
 
@@ -2299,7 +2707,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var styl
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ \"./node_modules/styled-components/dist/styled-components.browser.esm.js\");\n/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! uuid/v4 */ \"./node_modules/uuid/v4.js\");\n/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../helpers */ \"./src/js/helpers.js\");\n/* harmony import */ var _WeatherItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./WeatherItem */ \"./src/js/components/WeatherList/WeatherItem.js\");\n/* harmony import */ var _img_rain_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../img/rain.png */ \"./src/img/rain.png\");\n/* harmony import */ var _img_rain_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_img_rain_png__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _img_sunny_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../img/sunny.png */ \"./src/img/sunny.png\");\n/* harmony import */ var _img_sunny_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_img_sunny_png__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _img_thunder_wind_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../img/thunder-wind.png */ \"./src/img/thunder-wind.png\");\n/* harmony import */ var _img_thunder_wind_png__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_img_thunder_wind_png__WEBPACK_IMPORTED_MODULE_7__);\n/* harmony import */ var _img_sunny_clouds_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../img/sunny-clouds.png */ \"./src/img/sunny-clouds.png\");\n/* harmony import */ var _img_sunny_clouds_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_img_sunny_clouds_png__WEBPACK_IMPORTED_MODULE_8__);\nfunction _templateObject() {\n  var data = _taggedTemplateLiteral([\"\", \"\"]);\n\n  _templateObject = function _templateObject() {\n    return data;\n  };\n\n  return data;\n}\n\nfunction _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }\n\n\n\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\n\n // Images\n\n\n\n\n\nvar styles = {\n  ul: \"\\n        grid-row: 1;\\n        display: flex;\\n        overflow: hidden;\\n        grid-column: 1 / 5;\\n        justify-content: space-between;\\n    \"\n};\n\nvar WeatherList =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(WeatherList, _Component);\n\n  function WeatherList() {\n    var _getPrototypeOf2;\n\n    var _this;\n\n    _classCallCheck(this, WeatherList);\n\n    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {\n      args[_key] = arguments[_key];\n    }\n\n    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(WeatherList)).call.apply(_getPrototypeOf2, [this].concat(args)));\n\n    _defineProperty(_assertThisInitialized(_this), \"state\", {\n      weatherList: [{\n        id: uuid_v4__WEBPACK_IMPORTED_MODULE_1___default()(),\n        imageUrl: _img_sunny_png__WEBPACK_IMPORTED_MODULE_6___default.a,\n        altText: \"sunny\",\n        low: \"50\",\n        high: \"95\",\n        date: \"April 12, 2019\"\n      }, {\n        id: uuid_v4__WEBPACK_IMPORTED_MODULE_1___default()(),\n        imageUrl: _img_thunder_wind_png__WEBPACK_IMPORTED_MODULE_7___default.a,\n        altText: \"thunder and windy\",\n        low: \"5\",\n        high: \"35\",\n        date: \"April 13, 2019\"\n      }, {\n        id: uuid_v4__WEBPACK_IMPORTED_MODULE_1___default()(),\n        imageUrl: _img_thunder_wind_png__WEBPACK_IMPORTED_MODULE_7___default.a,\n        altText: \"thunder and windy\",\n        low: \"10\",\n        high: \"55\",\n        date: \"April 14, 2019\"\n      }, {\n        id: uuid_v4__WEBPACK_IMPORTED_MODULE_1___default()(),\n        imageUrl: _img_sunny_png__WEBPACK_IMPORTED_MODULE_6___default.a,\n        altText: \"sunny\",\n        low: \"65\",\n        high: \"85\",\n        date: \"April 15, 2019\"\n      }, {\n        id: uuid_v4__WEBPACK_IMPORTED_MODULE_1___default()(),\n        imageUrl: _img_rain_png__WEBPACK_IMPORTED_MODULE_5___default.a,\n        altText: \"rain\",\n        low: \"45\",\n        high: \"55\",\n        date: \"April 16, 2019\"\n      }]\n    });\n\n    _defineProperty(_assertThisInitialized(_this), \"getIP\", function () {\n      fetch(\"https://api.ipify.org?format=json\").then(_helpers__WEBPACK_IMPORTED_MODULE_3__[\"readResponse\"]).then(_this.getLocationKey);\n    });\n\n    _defineProperty(_assertThisInitialized(_this), \"getLocationKey\", function (_ref) {\n      var ip = _ref.ip;\n      fetch(\"http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=KwDARgjJ91Ka7VuVLYvOShmZXUCctrhd&q=\".concat(ip)).then(_helpers__WEBPACK_IMPORTED_MODULE_3__[\"readResponse\"]).then(_this.getFiveDayForecast);\n    });\n\n    _defineProperty(_assertThisInitialized(_this), \"getFiveDayForecast\", function (_ref2) {\n      var Key = _ref2.Key;\n      fetch(\"http://dataservice.accuweather.com/forecasts/v1/daily/5day/\".concat(Key, \"?apikey=KwDARgjJ91Ka7VuVLYvOShmZXUCctrhd&details=true\")).then(_helpers__WEBPACK_IMPORTED_MODULE_3__[\"readResponse\"]).then(function (data) {\n        return console.log(data);\n      });\n    });\n\n    return _this;\n  }\n\n  _createClass(WeatherList, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      this.getIP();\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_StyledUl, {\n        _css: styles.ul\n      }, this.state.weatherList.map(function (weatherItem) {\n        return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_WeatherItem__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n          key: weatherItem.id,\n          id: weatherItem.id,\n          imageUrl: weatherItem.imageUrl,\n          altText: weatherItem.altText,\n          low: weatherItem.low,\n          high: weatherItem.high,\n          date: weatherItem.date\n        });\n      }));\n    }\n  }]);\n\n  return WeatherList;\n}(react__WEBPACK_IMPORTED_MODULE_2__[\"Component\"]);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (WeatherList);\n\nvar _StyledUl = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"ul\")(_templateObject(), function (p) {\n  return p._css;\n});\n\n//# sourceURL=webpack:///./src/js/components/WeatherList/WeatherList.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ \"./node_modules/styled-components/dist/styled-components.browser.esm.js\");\n/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ \"./node_modules/moment/moment.js\");\n/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! uuid/v4 */ \"./node_modules/uuid/v4.js\");\n/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _client_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../client-api */ \"./src/js/client-api.js\");\n/* harmony import */ var _WeatherItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./WeatherItem */ \"./src/js/components/WeatherList/WeatherItem.js\");\nfunction _templateObject() {\n  var data = _taggedTemplateLiteral([\"\", \"\"]);\n\n  _templateObject = function _templateObject() {\n    return data;\n  };\n\n  return data;\n}\n\nfunction _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }\n\n\n\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\n\n\n // Importing all images\n\nvar cache = {};\n\nfunction importAll(r) {\n  r.keys().forEach(function (key) {\n    return cache[key] = r(key);\n  });\n}\n\nimportAll(__webpack_require__(\"./src/img sync \\\\.png$\"));\nvar styles = {\n  ul: \"\\n        grid-row: 1;\\n        display: flex;\\n        overflow: hidden;\\n        grid-column: 1 / 5;\\n        justify-content: space-between;\\n    \"\n};\n\nvar WeatherList =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(WeatherList, _Component);\n\n  function WeatherList() {\n    var _getPrototypeOf2;\n\n    var _this;\n\n    _classCallCheck(this, WeatherList);\n\n    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {\n      args[_key] = arguments[_key];\n    }\n\n    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(WeatherList)).call.apply(_getPrototypeOf2, [this].concat(args)));\n\n    _defineProperty(_assertThisInitialized(_this), \"state\", {\n      weatherList: []\n    });\n\n    _defineProperty(_assertThisInitialized(_this), \"createForecast\", function (_ref) {\n      var DailyForecasts = _ref.DailyForecasts;\n      var forecastObjects = DailyForecasts.map(function (forecast) {\n        return {\n          id: uuid_v4__WEBPACK_IMPORTED_MODULE_2___default()(),\n          imageUrl: cache[\"./\".concat(forecast.Day.Icon, \".png\")],\n          altText: forecast.Day.IconPhrase,\n          low: forecast.Temperature.Minimum.Value,\n          high: forecast.Temperature.Maximum.Value,\n          date: moment__WEBPACK_IMPORTED_MODULE_1___default()(forecast.Date).format(\"MMMM DD, YYYY\")\n        };\n      });\n\n      _this.setState({\n        weatherList: forecastObjects\n      });\n    });\n\n    return _this;\n  }\n\n  _createClass(WeatherList, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      Object(_client_api__WEBPACK_IMPORTED_MODULE_4__[\"_getWeatherForecast\"])().then(this.createForecast);\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_StyledUl, {\n        _css: styles.ul\n      }, this.state.weatherList.map(function (weatherItem) {\n        return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_WeatherItem__WEBPACK_IMPORTED_MODULE_5__[\"default\"], {\n          key: weatherItem.id,\n          id: weatherItem.id,\n          imageUrl: weatherItem.imageUrl,\n          altText: weatherItem.altText,\n          low: weatherItem.low,\n          high: weatherItem.high,\n          date: weatherItem.date\n        });\n      }));\n    }\n  }]);\n\n  return WeatherList;\n}(react__WEBPACK_IMPORTED_MODULE_3__[\"Component\"]);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (WeatherList);\n\nvar _StyledUl = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"ul\")(_templateObject(), function (p) {\n  return p._css;\n});\n\n//# sourceURL=webpack:///./src/js/components/WeatherList/WeatherList.js?");
 
 /***/ }),
 
@@ -2311,7 +2719,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var styl
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getFormattedTime\", function() { return getFormattedTime; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"readResponse\", function() { return readResponse; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"parseJSON\", function() { return parseJSON; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"jsonify\", function() { return jsonify; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"logResponse\", function() { return logResponse; });\n/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! moment */ \"./node_modules/moment/moment.js\");\n/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_0__);\n\nvar getFormattedTime = function getFormattedTime() {\n  return moment__WEBPACK_IMPORTED_MODULE_0___default()().format(\"MMMM DD, YYYY hh:mm:ss A\");\n};\nvar readResponse = function readResponse(response) {\n  return response.json();\n};\nvar parseJSON = function parseJSON(json) {\n  return JSON.parse(json);\n};\nvar jsonify = function jsonify(object) {\n  return JSON.stringify(object);\n};\nvar logResponse = function logResponse(data) {\n  console.log(data.message);\n};\n\n//# sourceURL=webpack:///./src/js/helpers.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getFormattedTime\", function() { return getFormattedTime; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"readResponse\", function() { return readResponse; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"parseJSON\", function() { return parseJSON; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"jsonify\", function() { return jsonify; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"logResponse\", function() { return logResponse; });\n/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! moment */ \"./node_modules/moment/moment.js\");\n/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_0__);\n\nvar getFormattedTime = function getFormattedTime() {\n  return moment__WEBPACK_IMPORTED_MODULE_0___default()(new Date()).format(\"MMMM DD, YYYY hh:mm:ss A\");\n};\nvar readResponse = function readResponse(response) {\n  return response.json();\n};\nvar parseJSON = function parseJSON(json) {\n  return JSON.parse(json);\n};\nvar jsonify = function jsonify(object) {\n  return JSON.stringify(object);\n};\nvar logResponse = function logResponse(data) {\n  console.log(data.message);\n};\n\n//# sourceURL=webpack:///./src/js/helpers.js?");
 
 /***/ }),
 
