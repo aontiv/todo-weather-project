@@ -16,7 +16,7 @@ class TodoList extends Component {
                 {
                     this.props.todos.map(todo => (
                         <Todo
-                            key={todo.id}
+                            key={`todo: ${todo.id}`}
                             id={todo.id}
                             timestamp={todo.timestamp}
                             text={todo.text}

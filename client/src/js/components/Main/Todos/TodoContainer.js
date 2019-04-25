@@ -62,7 +62,6 @@ class TodoContainer extends Component {
 
     createTodo = todoText => {
         return {
-            id: uuidv4(),
             timestamp: getFormattedTime(),
             text: todoText,
             complete: false,

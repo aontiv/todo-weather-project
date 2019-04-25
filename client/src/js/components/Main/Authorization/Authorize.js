@@ -142,10 +142,7 @@ class Authorize extends Component {
     };
 
     createUser = () => {
-        return {
-            id: uuidv4(),
-            ...this.state.fields
-        };
+        return { ...this.state.fields };
     };
 
     render() {
