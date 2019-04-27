@@ -53,7 +53,7 @@ const styles = {
         padding: 0.625rem;
         align-items: center;
         border-radius: 0.3125rem;
-        background-color: ${props => props.theme.primaryL};
+        background-color: ${props => props.theme.PRIMARY_LIGHT};
 
         @media screen and (min-width: 37.5rem) {
             font-size: 1.25rem;
@@ -63,11 +63,11 @@ const styles = {
 
 class Todo extends Component {
     handleDeleteClick = () => {
-        this.props.deleteTodo(this.props.id);
+        this.props.deleteTodo(this.props.todoId);
     };
 
     handleTodoClick = () => {
-        this.props.toggleTodoComplete(this.props.id);
+        this.props.updateTodo(this.props.todoId);
     };
 
     render() {

@@ -16,13 +16,13 @@ class TodoList extends Component {
                 {
                     this.props.todos.map(todo => (
                         <Todo
-                            key={`todo: ${todo.id}`}
-                            id={todo.id}
+                            key={`todo: ${todo.todoId}`}
+                            todoId={todo.todoId}
                             timestamp={todo.timestamp}
                             text={todo.text}
                             complete={todo.complete}
                             deleteTodo={this.props.deleteTodo}
-                            toggleTodoComplete={this.props.toggleTodoComplete}
+                            updateTodo={this.props.updateTodo}
                         />
                     ))
                 }

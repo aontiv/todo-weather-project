@@ -1,7 +1,7 @@
 import uuidv4 from "uuid/v4";
+import Client from "../../../Client";
 import { css } from "styled-components";
 import React, { Component } from "react";
-import { _login, _addUser } from "../../../client-api";
 
 const styles = {
     container: `
@@ -47,11 +47,11 @@ const styles = {
         margin-bottom: 0.625rem;
         border-radius: 0.3125rem;
         transition: background-color 500ms;
-        background-color: ${props => props.theme.secondary};
+        background-color: ${props => props.theme.SECONDARY};
 
         :hover {
             cursor: pointer;
-            background-color: ${props => props.theme.primary};
+            background-color: ${props => props.theme.PRIMARY};
         }
 
         @media screen and (min-width: 37.5rem) {
@@ -73,14 +73,14 @@ const styles = {
         }
     `,
     login: css`
-        border-bottom: 2px solid ${props => props.context === "login" ? props.theme.secondary : "transparent"};
+        border-bottom: 2px solid ${props => props.context === "login" ? props.theme.SECONDARY : "transparent"};
 
         &:hover {
             cursor: pointer;
         }
     `,
     register: css`
-        border-bottom: 2px solid ${props => props.context === "register" ? props.theme.secondary : "transparent"};
+        border-bottom: 2px solid ${props => props.context === "register" ? props.theme.SECONDARY : "transparent"};
 
         &:hover {
             cursor: pointer;
@@ -117,23 +117,25 @@ class Authorize extends Component {
     };
 
     handleLogin = () => {
-        _login(this.state.fields)
+        Client.login(this.state.fields)
             .then(this.login);
     };
 
     login = data => {
-        if (data.status === 200) {
-            this.props.login(data.body);
+        if (data) {
+            this.props.login(data);
         }
         else {
-            console.log(data.message);
+            const fields = { username: "", password: "" };
+            this.setState({ fields })
         }
+        
     };
 
     handleRegister = () => {
         const newUser = this.createUser();
 
-        _addUser(newUser)
+        Client.addUser(newUser)
             .then(this.register)
     };
 
@@ -142,7 +144,10 @@ class Authorize extends Component {
     };
 
     createUser = () => {
-        return { ...this.state.fields };
+        return {
+            userId: uuidv4(),
+            ...this.state.fields
+        };
     };
 
     render() {

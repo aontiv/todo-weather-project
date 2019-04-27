@@ -6,7 +6,7 @@ const styles = {
         color: #fff;
         padding: 0.5rem;
         margin-bottom: 2.1875rem;
-        background-color: ${props => props.theme.primaryD};
+        background-color: ${props => props.theme.PRIMARY_DARK};
 
         @media screen and (min-width: 37.5rem) {
             width: 100%;
@@ -57,7 +57,7 @@ const styles = {
     `,
     h1: css`
         font-size: 1.5625rem;
-        font-family: ${props => props.theme.primaryFont};
+        font-family: ${props => props.theme.PRIMARY_FONT};
 
         @media screen and (min-width: 37.5rem) {
             font-size: 2.8125rem;

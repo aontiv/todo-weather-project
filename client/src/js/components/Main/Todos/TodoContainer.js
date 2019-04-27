@@ -1,8 +1,8 @@
 import moment from "moment";
 import uuidv4 from "uuid/v4";
+import Client from "../../../Client";
+import Helpers from "../../../Helpers";
 import React, { Component, Fragment } from "react";
-import { getFormattedTime, logResponse } from "../../../helpers";
-import { _getUserTodos, _addTodo, _updateTodo, _deleteTodo } from "../../../client-api";
 
 import AddTodo from "./AddTodo";
 import TodoSwitcher from "./TodoSwitcher";
@@ -13,12 +13,12 @@ class TodoContainer extends Component {
     };
 
     componentDidMount() {
-        _getUserTodos(this.props.userId)
+        Client.getTodos(this.props.userId)
             .then(this.handleData)
     }
 
     handleData = data => {
-        this.initialState(data.body);
+        this.initialState(data);
     };
 
     initialState = todos => {
@@ -30,21 +30,19 @@ class TodoContainer extends Component {
         const newTodos = this.state.todos.concat([newTodo]);
         this.setState({ todos: newTodos });
 
-        _addTodo(newTodo)
-            .then(logResponse)
+        Client.addTodo(newTodo)
     };
 
-    deleteTodo = id => {
-        const newTodos = this.state.todos.filter(todo => todo.id !== id);
+    deleteTodo = todoId => {
+        const newTodos = this.state.todos.filter(todo => todo.todoId !== todoId);
         this.setState({ todos: newTodos });
 
-        _deleteTodo(id)
-            .then(logResponse)
+        Client.deleteTodo(todoId);
     };
 
-    toggleTodoComplete = id => {
+    updateTodo = todoId => {
         const newTodos = this.state.todos.map(todo => {
-            if (todo.id === id) {
+            if (todo.todoId === todoId) {
                 if (todo.complete) {
                     todo.complete = false;
                 }
@@ -56,13 +54,13 @@ class TodoContainer extends Component {
         });
         this.setState({ todos: newTodos });
 
-        _updateTodo(id, newTodos)
-            .then(logResponse)
+        Client.updateTodo(todoId, newTodos);
     };
 
     createTodo = todoText => {
         return {
-            timestamp: getFormattedTime(),
+            todoId: uuidv4(),
+            timestamp: Helpers.getFormattedTime(),
             text: todoText,
             complete: false,
             userId: this.props.userId
@@ -93,7 +91,7 @@ class TodoContainer extends Component {
                     isEmpty={isEmpty}
                     todos={sortedTodos}
                     deleteTodo={this.deleteTodo}
-                    toggleTodoComplete={this.toggleTodoComplete}
+                    updateTodo={this.updateTodo}
                 />
             </Fragment>
         );

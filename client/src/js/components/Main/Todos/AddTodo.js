@@ -39,7 +39,7 @@ const styles = {
         height: 1.9375rem;
         border-style: unset;
         border-radius: 0.3125rem;
-        background-color: ${props => props.theme.secondary};
+        background-color: ${props => props.theme.SECONDARY};
 
         :hover {
             cursor: pointer;

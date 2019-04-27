@@ -17,7 +17,7 @@ class TodoSwitcher extends Component {
                 <TodoList
                     todos={this.props.todos}
                     deleteTodo={this.props.deleteTodo}
-                    toggleTodoComplete={this.props.toggleTodoComplete}
+                    updateTodo={this.props.updateTodo}
                 />
             );
         }

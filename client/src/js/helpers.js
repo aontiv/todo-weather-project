@@ -1,21 +1,36 @@
 import moment from "moment";
 
-export const getFormattedTime = () => {
-    return moment(new Date()).format("MMMM DD, YYYY hh:mm:ss A");
-};
+const Helpers = () => {
 
-export const readResponse = response => {
-    return response.json();
-};
+    const getFormattedTime = () => {
+        return moment(new Date()).format("MMMM DD, YYYY hh:mm:ss A");
+    };
 
-export const parseJSON = json => {
-    return JSON.parse(json);
-};
+    const parseResponse = response => {
+        return response.json();
+    };
 
-export const jsonify = object => {
-    return JSON.stringify(object);
-};
+    const jsonify = object => {
+        return JSON.stringify(object);
+    };
 
-export const logResponse = data => {
-    console.log(data.message);
-};
+    const handleResponse = response => {
+        if (response.status === 200) {
+            return parseResponse(response);
+        }
+        else {
+            parseResponse(response)
+                .then(data => {
+                    throw new ReferenceError(data.message)
+                })
+        }
+    };
+
+    return {
+        getFormattedTime,
+        jsonify,
+        handleResponse
+    }
+}
+
+export default Helpers();

@@ -1,7 +1,8 @@
 import json
 from flask_sqlalchemy import SQLAlchemy
-from helpers import usernameMatch, passwordMatch
-from flask import Flask, request, jsonify, render_template
+from AccuweatherClient import get_location_key
+from Helpers import usernameMatch, passwordMatch
+from flask import Flask, request, jsonify, render_template, make_response
 
 app = Flask(__name__, template_folder="./dist", static_folder="./dist/static")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
@@ -10,6 +11,7 @@ db = SQLAlchemy(app)
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.String, unique=True, nullable=False)
     username = db.Column(db.String, nullable=False)
     password = db.Column(db.String, nullable=False)
 
@@ -20,6 +22,7 @@ class User(db.Model):
 
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    todo_id = db.Column(db.String, unique=True, nullable=False)
     timestamp = db.Column(db.String, unique=True, nullable=False)
     text = db.Column(db.String, nullable=False)
     complete = db.Column(db.Boolean, nullable=False)
@@ -30,6 +33,8 @@ class Todo(db.Model):
 
 db.create_all()
 
+HEADERS = { "Content-Type": "application/json" }
+
 @app.route("/", methods=["GET"])
 def root():
     return render_template("index.html")
@@ -39,17 +44,17 @@ def login():
     if request.method == "POST":
         rq_data = request.get_json()
         user = User.query.filter_by(username=rq_data["username"]).first()
-        auth_user = user.password == rq_data["password"]
+        auth_user = user.password == rq_data["password"] if user else None
 
         result = None
         if not user:
-            result = {"status": 400, "message": "{} not found".format(rq_data["username"])}
+            result = (json.dumps({ "message": "{} not found".format(rq_data["username"]) }), 400, HEADERS)
         if user and not auth_user:
-            result = {"status": 400, "message": "{}'s password is incorrect".format(rq_data["username"])}
+            result = (json.dumps({ "message": "{}'s password is incorrect".format(rq_data["username"]) }), 400, HEADERS)
         if user and auth_user:
-            result = {"status": 200, "body": { "id": user.id, "username": user.username }}
+            result = (json.dumps({ "userId": user.user_id, "username": user.username }), 200, HEADERS)
         
-        return jsonify(result)
+        return make_response(result)
     else:
         return render_template("index.html")
 
@@ -59,48 +64,59 @@ def get_todos(id):
 
         user_todos = []
         for todo in todos:
-            user_todos.append({ "id": todo.id, "timestamp": todo.timestamp, "text": todo.text, "complete": todo.complete, "userId": todo.user_id })
+            user_todos.append({ "id": todo.id, "todoId": todo.todo_id, "timestamp": todo.timestamp, "text": todo.text, "complete": todo.complete, "userId": todo.user_id })
 
-        return jsonify({ "status": 200, "body": user_todos })
+        return jsonify(user_todos)
 
 @app.route("/add_user", methods=["POST"])
 def add_user():
     rq_data = request.get_json()
-    new_user = User(username=rq_data["username"], password=rq_data["password"])
+    rq_user = User.query.filter_by(username=rq_data["username"]).first()
 
-    db.session.add(new_user)
-    db.session.commit()
+    if not rq_user:
+        new_user = User(user_id=rq_data["userId"], username=rq_data["username"], password=rq_data["password"])
 
-    return jsonify({ "status": 200, "body": { "id": new_user.id, "username": new_user.username } })
+        db.session.add(new_user)
+        db.session.commit()
+
+        return jsonify({ "userId": new_user.user_id, "username": new_user.username })
+    else:
+        return make_response(json.dumps({ "message": "{} already exists".format(rq_data["username"]) }), 400, HEADERS)
 
 @app.route("/add_todo", methods=["POST"])
 def add_todo():
     rq_data = request.get_json()
-    todo = Todo(timestamp=rq_data["timestamp"], text=rq_data["text"], complete=rq_data["complete"], user_id=rq_data["userId"])
+    todo = Todo(todo_id=rq_data["todoId"], timestamp=rq_data["timestamp"], text=rq_data["text"], complete=rq_data["complete"], user_id=rq_data["userId"])
 
     db.session.add(todo)
     db.session.commit()
 
-    return jsonify({ "status": 200, "message": "new todo with id: {} added".format(todo.id) })
+    return jsonify({ "message": "new todo with id: {} added".format(todo.todo_id) })
 
 @app.route("/update_todo", methods=["UPDATE"])
 def update_todo():
     rq_data = request.get_json()
-    todo = Todo.query.filter_by(id=rq_data["id"]).first()
+    todo = Todo.query.filter_by(todo_id=rq_data["todoId"]).first()
 
     todo.complete = rq_data["complete"]
     db.session.commit()
 
-    return jsonify({ "status": 200, "message": "todo with id: {} updated".format(rq_data["id"])})
+    return jsonify({ "message": "todo with id: {} updated".format(rq_data["todoId"])})
 
 @app.route("/delete_todo/<todo_id>", methods=["DELETE"])
 def delete_todo(todo_id):
-    todo = Todo.query.filter_by(id=todo_id).first()
+    todo = Todo.query.filter_by(todo_id=todo_id).first()
     
     db.session.delete(todo)
     db.session.commit()
     
-    return jsonify({ "status": 200, "message": "todo with id: {} was deleted".format(todo_id) })
+    return jsonify({ "message": "todo with id: {} was deleted".format(todo_id) })
+
+@app.route("/get_weather_forecast", methods=["POST"])
+def get_weather_forecast():
+    rq_data = request.get_json()
+    weather_forecast = get_location_key(rq_data["ip"])
+    return jsonify(weather_forecast["DailyForecasts"])
 
 if __name__ == "__main__":
     app.env = "development"

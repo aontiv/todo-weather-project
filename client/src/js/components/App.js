@@ -1,4 +1,4 @@
-import { theme } from "../theme";
+import Theme from "../Theme";
 import React, { Component } from "react";
 import { ThemeProvider } from "styled-components";
 
@@ -34,7 +34,7 @@ const styles = {
 class App extends Component {
     state = {
         user: {
-            id: null,
+            userId: null,
             username: "",
         },
         authorized: false
@@ -51,7 +51,7 @@ class App extends Component {
 
     render() {
         return (
-            <ThemeProvider theme={theme}>
+            <ThemeProvider theme={Theme}>
                 <div css={styles.app}>
                     <HeaderSwitcher
                         authorized={this.state.authorized}
@@ -62,7 +62,7 @@ class App extends Component {
                         <WeatherList />
                         <AuthorizationSwitcher
                             login={this.login}
-                            userId={this.state.user.id}
+                            userId={this.state.user.userId}
                             authorized={this.state.authorized}
                         />
                     </div>

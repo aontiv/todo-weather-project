@@ -1,7 +1,7 @@
 import moment from "moment";
 import uuidv4 from "uuid/v4";
+import Client from "../../Client";
 import React, { Component } from "react";
-import { _getWeatherForecast } from "../../client-api";
 
 import WeatherItem from "./WeatherItem";
 
@@ -29,13 +29,13 @@ class WeatherList extends Component {
         weatherList: []
     };
 
-    componentDidMount() {
-        _getWeatherForecast()
-            .then(this.createForecast)
-    }
+    // componentDidMount() {
+    //     Client.getIpAddress()
+    //         .then(this.createForecast)
+    // }
 
-    createForecast = ({ DailyForecasts }) => {
-        const forecastObjects = DailyForecasts.map(forecast => {
+    createForecast = (dailyForecasts) => {
+        const forecastObjects = dailyForecasts.map(forecast => {
             return {
                 id: uuidv4(),
                 imageUrl: cache[`./${forecast.Day.Icon}.png`],

@@ -50,7 +50,7 @@ const styles = {
     date: css`
         text-align: center;
         font-size: 0.75rem;
-        color: ${props => props.theme.primaryL};
+        color: ${props => props.theme.PRIMARY_LIGHT};
 
         @media screen and (min-width: 37.5rem) {
             font-size: 0.85rem;
