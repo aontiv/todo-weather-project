@@ -1,12 +1,13 @@
-import Input from "./Input";
 import uuidv4 from "uuid/v4";
 import classNames from "classnames";
 import Client from "../../../Client";
 import Helpers from "../../../Helpers";
 import React, { Component } from "react";
 
+import Input from "./Input";
+
 const formStyles = validated => classNames(
-    [ "p-4", "rounded", "shadow", "col-sm-4", "col-10", "mb-5", "mb-sm-0" ],
+    [ "p-3", "rounded", "shadow", "mb-5", "mb-sm-0", "login-form" ],
     { "was-validated": validated }
 );
 
@@ -78,7 +79,7 @@ class Authorize extends Component {
         else {
             const fields = { username: "", password: "" };
             this.setState({ fields })
-        } 
+        }
     };
 
     handleRegister = () => {
@@ -99,7 +100,7 @@ class Authorize extends Component {
         return (
             <div className="row justify-content-center">
                 <form className={formStyles(this.state.validated)} onSubmit={this.handleFormSubmit} noValidate={true}>
-                    <h2 className="text-center text-muted mb-4">{Helpers.capitalize(this.state.context)}</h2>
+                    <h2 className="text-center text-muted mb-4 login-h2">{Helpers.capitalize(this.state.context)}</h2>
                     <Input
                         className="form-control text-center"
                         type="text"
@@ -125,12 +126,12 @@ class Authorize extends Component {
                         reference={this.passwordInput}
                     />
                     <button
-                        className="secondary-bgcolor text-white btn btn-block mb-3"
+                        className="bg-secondary text-white btn btn-block mb-1"
                         type="submit"
                     >
                         {this.state.context.toUpperCase()}
                     </button>
-                    <div className="d-flex justify-content-center mb-3">
+                    <div className="d-flex justify-content-center mb-2">
                         <button
                             className="btn btn-link p-1"
                             type="button"
@@ -148,7 +149,7 @@ class Authorize extends Component {
                             register
                         </button>
                     </div>
-                    <small className="help-text text-muted">*alpha-numeric characters, underscores, and dashes only</small>
+                    <small className="help-text text-muted">*alpha-numeric characters, underscores, and dashes</small>
                 </form>
                 <div className={errorStyles(this.state.error)}>
                     <span className="mx-2">{this.state.error}</span>

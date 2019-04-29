@@ -77,7 +77,7 @@ class TodoContainer extends Component {
             }
         });
     };
-    
+
     render() {
         const isEmpty = this.state.todos.length === 0 ? true : false;
         const sortedTodos = this.sortTodos(this.state.todos);

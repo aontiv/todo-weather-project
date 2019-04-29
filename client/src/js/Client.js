@@ -9,7 +9,7 @@ const Client = () => {
         })
         .then(Helpers.handleResponse)
     };
-    
+
     const getTodos = userId => {
         return fetch(`/get_todos/${userId}`)
                 .then(Helpers.handleResponse)

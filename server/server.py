@@ -7,6 +7,9 @@ from flask import Flask, request, jsonify, render_template, make_response
 app = Flask(__name__, template_folder="./dist", static_folder="./dist/static")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/database.db"
+
+## DATABASE CONFIG ##
+
 db = SQLAlchemy(app)
 
 class User(db.Model):
@@ -32,6 +35,8 @@ class Todo(db.Model):
         return '<Todo %r>' % self.text
 
 db.create_all()
+
+## APPLICATION ROUTES ##
 
 HEADERS = { "Content-Type": "application/json" }
 

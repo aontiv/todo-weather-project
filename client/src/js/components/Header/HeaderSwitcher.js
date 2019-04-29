@@ -8,7 +8,7 @@ class HeaderSwitcher extends Component {
         const authorized = this.props.authorized;
 
         return (
-            <div className="primary-bgcolor container-fluid mb-2 mb-sm-5">
+            <div className="bg-primary container-fluid mb-2 mb-sm-5">
                 <div className="container">
                     {
                         authorized ? (

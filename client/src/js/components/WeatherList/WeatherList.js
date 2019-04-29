@@ -42,7 +42,7 @@ class WeatherList extends Component {
     render() {
         return (
             <div className="row justify-content-center mb-5">
-                <ul className="weather-ul list-group list-group-horizontal">
+                <ul className="overflow-hidden list-group list-group-horizontal">
                     {
                         this.state.weatherList.map(weatherItem => (
                             <WeatherItem

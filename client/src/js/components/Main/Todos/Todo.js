@@ -20,7 +20,7 @@ class Todo extends Component {
                     </button>
                 </div>
                 <a href="" className="list-group-item-action">
-                    <p className="primary-light-bgcolor text-white rounded p-3 m-0" onClick={this.handleTodoClick}>
+                    <p className="bg-secondary text-white rounded p-3 m-0" onClick={this.handleTodoClick}>
                         {
                             !this.props.complete
                                 ? this.props.text

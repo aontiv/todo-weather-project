@@ -30,7 +30,7 @@ class AddTodo extends Component {
                         placeholder="add todo..."
                     />
                     <button
-                        className="secondary-bgcolor secondary-brcolor btn btn-primary"
+                        className="text-white btn btn-primary"
                         type="submit"
                     >
                         ADD

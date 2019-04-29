@@ -1,0 +1,44 @@
+$primary:   #301557;
+$secondary: #AA9F39;
+
+$enable-responsive-font-sizes: true;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+h1 {
+    font-size: 1.25rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+small {
+    font-size: 70%;
+}
+
+.nav-btn-font {
+    font-size: 0.75rem;
+}
+
+.login-h2 {
+    font-size: 1.25rem;
+}
+
+.login-form {
+    width: 18.75rem;
+}
+
+@media screen and (min-width: 576px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .nav-btn-font {
+        font-size: 1rem;
+    }
+}

@@ -26,10 +26,10 @@ module.exports = {
                 ]
             },
             {
-                test: /\.css$/,
-                include: [ /bootstrap/, /css/ ],
+                test: /\.scss$/,
+                include: /scss/,
                 exclude: /node_modules/,
-                use: [ "style-loader", "css-loader" ]
+                use: [ "style-loader", "css-loader", "postcss-loader", "sass-loader" ]
             }
         ]
     },
