@@ -1,92 +1,19 @@
+import Input from "./Input";
 import uuidv4 from "uuid/v4";
+import classNames from "classnames";
 import Client from "../../../Client";
-import { css } from "styled-components";
+import Helpers from "../../../Helpers";
 import React, { Component } from "react";
 
-const styles = {
-    container: `
-        grid-row: 2;
-        display: flex;
-        grid-column: 1 / 5;
-        align-items: center;
-        margin-top: 3.75rem;
-        flex-direction: column;
-        margin-bottom: 3.75rem;
+const formStyles = validated => classNames(
+    [ "p-4", "rounded", "shadow", "col-sm-4", "col-10", "mb-5", "mb-sm-0" ],
+    { "was-validated": validated }
+);
 
-        @media screen and (min-width: 37.5rem) {
-            margin-top: 7.5rem;
-        }
-    `,
-    input: `
-        width: 66%;
-        font-size: 1rem;
-        height: 1.9375rem;
-        text-align: center;
-        padding: 0.3125rem;
-        border-style: unset;
-        border-radius: 0.3125rem;
-        margin-bottom: 0.3125rem;
-        background-color: #f1f1f1;
-
-        @media screen and (min-width: 37.5rem) {
-            height: 2.75rem;
-            padding: 0.625rem;
-            font-size: 1.25rem;
-        }
-
-        @media screen and (min-width: 60rem) {
-            width: 33%;
-        }
-    `,
-    button: css`
-        width: 66%;
-        color: #fff;
-        font-size: 1rem;
-        height: 1.9375rem;
-        border-style: unset;
-        margin-bottom: 0.625rem;
-        border-radius: 0.3125rem;
-        transition: background-color 500ms;
-        background-color: ${props => props.theme.SECONDARY};
-
-        :hover {
-            cursor: pointer;
-            background-color: ${props => props.theme.PRIMARY};
-        }
-
-        @media screen and (min-width: 37.5rem) {
-            height: 2.75rem;
-            padding: 0.5rem;
-            font-size: 1.25rem;
-        }
-
-        @media screen and (min-width: 60rem) {
-            width: 33%;
-        }
-    `,
-    p: css`
-        color: #858585;
-        font-size: 0.75rem;
-
-        @media screen and (min-width: 37.5rem) {
-            font-size: 1rem;
-        }
-    `,
-    login: css`
-        border-bottom: 2px solid ${props => props.context === "login" ? props.theme.SECONDARY : "transparent"};
-
-        &:hover {
-            cursor: pointer;
-        }
-    `,
-    register: css`
-        border-bottom: 2px solid ${props => props.context === "register" ? props.theme.SECONDARY : "transparent"};
-
-        &:hover {
-            cursor: pointer;
-        }
-    `
-};
+const errorStyles = error => classNames(
+    [ "alert", "alert-danger", "text-center", "fixed-bottom", "fade" ],
+    { show: error }
+);
 
 class Authorize extends Component {
     state = {
@@ -94,8 +21,14 @@ class Authorize extends Component {
             username: "",
             password: ""
         },
-        context: "login"
+        context: "login",
+        validated: false,
+        error: ""
     };
+
+    // References for client-side form validation purposes
+    usernameInput = React.createRef();
+    passwordInput = React.createRef();
 
     handleFieldChange = evt => {
         var fields = { ...this.state.fields, [evt.target.name]: evt.target.value };
@@ -108,17 +41,34 @@ class Authorize extends Component {
 
     handleFormSubmit = evt => {
         evt.preventDefault();
-        if (this.state.context === "login") {
-            this.handleLogin();
+
+        const usernameValid = this.usernameInput.current.checkValidity();
+        const passwordValid = this.passwordInput.current.checkValidity();
+
+        if (usernameValid && passwordValid) {
+            if (this.state.context === "login") {
+                this.handleLogin();
+            }
+            else {
+                this.handleRegister();
+            }
         }
-        else {
-            this.handleRegister();
-        }
+
+        this.setState({ validated: true });
     };
 
     handleLogin = () => {
         Client.login(this.state.fields)
-            .then(this.login);
+            .then(this.handleResponse)
+    };
+
+    handleResponse = response => {
+        if (response instanceof Error) {
+            this.setState({ error: response.message });
+        }
+        else {
+            this.login(response);
+        }
     };
 
     login = data => {
@@ -128,19 +78,14 @@ class Authorize extends Component {
         else {
             const fields = { username: "", password: "" };
             this.setState({ fields })
-        }
-        
+        } 
     };
 
     handleRegister = () => {
         const newUser = this.createUser();
 
         Client.addUser(newUser)
-            .then(this.register)
-    };
-
-    register = data => {
-        this.login(data)
+            .then(this.handleResponse)
     };
 
     createUser = () => {
@@ -152,40 +97,63 @@ class Authorize extends Component {
 
     render() {
         return (
-            <form css={styles.container} onSubmit={this.handleFormSubmit}>
-                <input
-                    css={styles.input}
-                    type="text"
-                    placeholder="username"
-                    value={this.state.fields.username}
-                    name="username"
-                    onChange={this.handleFieldChange}
-                />
-                <input
-                    css={styles.input}
-                    type="password"
-                    placeholder="password"
-                    value={this.state.fields.password}
-                    name="password"
-                    onChange={this.handleFieldChange}
-                />
-                <button
-                    css={styles.button}
-                    type="submit"
-                >
-                    {this.state.context.toUpperCase()}
-                </button>
-                <p css={styles.p}>
-                    <span
-                        css={styles.login}
-                        context={this.state.context}
-                        onClick={this.handleContextChange}>login</span> |&nbsp;
-                    <span
-                        css={styles.register}
-                        context={this.state.context}
-                        onClick={this.handleContextChange}>register</span>
-                </p>
-            </form>
+            <div className="row justify-content-center">
+                <form className={formStyles(this.state.validated)} onSubmit={this.handleFormSubmit} noValidate={true}>
+                    <h2 className="text-center text-muted mb-4">{Helpers.capitalize(this.state.context)}</h2>
+                    <Input
+                        className="form-control text-center"
+                        type="text"
+                        placeholder="username"
+                        value={this.state.fields.username}
+                        name="username"
+                        onChange={this.handleFieldChange}
+                        required
+                        minLength="5"
+                        pattern="^\w{5}(\w|-){0,15}$"
+                        reference={this.usernameInput}
+                    />
+                    <Input
+                        className="form-control text-center"
+                        type="password"
+                        placeholder="password"
+                        value={this.state.fields.password}
+                        name="password"
+                        onChange={this.handleFieldChange}
+                        required
+                        minLength="5"
+                        pattern="^\w{5}(\w|-){0,15}$"
+                        reference={this.passwordInput}
+                    />
+                    <button
+                        className="secondary-bgcolor text-white btn btn-block mb-3"
+                        type="submit"
+                    >
+                        {this.state.context.toUpperCase()}
+                    </button>
+                    <div className="d-flex justify-content-center mb-3">
+                        <button
+                            className="btn btn-link p-1"
+                            type="button"
+                            context={this.state.context}
+                            onClick={this.handleContextChange}
+                        >
+                            login
+                        </button>
+                        <button
+                            className="btn btn-link p-1"
+                            type="button"
+                            context={this.state.context}
+                            onClick={this.handleContextChange}
+                        >
+                            register
+                        </button>
+                    </div>
+                    <small className="help-text text-muted">*alpha-numeric characters, underscores, and dashes only</small>
+                </form>
+                <div className={errorStyles(this.state.error)}>
+                    <span className="mx-2">{this.state.error}</span>
+                </div>
+            </div>
         );
     }
 }

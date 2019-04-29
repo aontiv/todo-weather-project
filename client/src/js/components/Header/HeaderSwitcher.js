@@ -7,19 +7,22 @@ class HeaderSwitcher extends Component {
     render() {
         const authorized = this.props.authorized;
 
-        if (authorized) {
-            return (
-                <HeaderAuthorized
-                    username={this.props.username}
-                    logout={this.props.logout}
-                />
-            );
-        }
-        else {
-            return (
-                <HeaderNotAuthorized />
-            );
-        }
+        return (
+            <div className="primary-bgcolor container-fluid mb-2 mb-sm-5">
+                <div className="container">
+                    {
+                        authorized ? (
+                            <HeaderAuthorized
+                                username={this.props.username}
+                                logout={this.props.logout}
+                            />
+                        ) : (
+                            <HeaderNotAuthorized />
+                        )
+                    }
+                </div>
+            </div>
+        );
     }
 }
 

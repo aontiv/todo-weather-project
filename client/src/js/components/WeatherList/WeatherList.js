@@ -14,25 +14,16 @@ function importAll (r) {
 
 importAll(require.context("../../../img/", false, /\.png$/));
 
-const styles = {
-    ul: `
-        grid-row: 1;
-        display: flex;
-        overflow: hidden;
-        grid-column: 1 / 5;
-        justify-content: space-between;
-    `
-};
 
 class WeatherList extends Component {
     state = {
         weatherList: []
     };
 
-    // componentDidMount() {
-    //     Client.getIpAddress()
-    //         .then(this.createForecast)
-    // }
+    componentDidMount() {
+        Client.getIpAddress()
+            .then(this.createForecast)
+    }
 
     createForecast = (dailyForecasts) => {
         const forecastObjects = dailyForecasts.map(forecast => {
@@ -50,21 +41,23 @@ class WeatherList extends Component {
 
     render() {
         return (
-            <ul css={styles.ul}>
-                {
-                    this.state.weatherList.map(weatherItem => (
-                        <WeatherItem
-                            key={weatherItem.id}
-                            id={weatherItem.id}
-                            imageUrl={weatherItem.imageUrl}
-                            altText={weatherItem.altText}
-                            low={weatherItem.low}
-                            high={weatherItem.high}
-                            date={weatherItem.date}
-                        />
-                    ))
-                }
-            </ul>
+            <div className="row justify-content-center mb-5">
+                <ul className="weather-ul list-group list-group-horizontal">
+                    {
+                        this.state.weatherList.map(weatherItem => (
+                            <WeatherItem
+                                key={weatherItem.id}
+                                id={weatherItem.id}
+                                imageUrl={weatherItem.imageUrl}
+                                altText={weatherItem.altText}
+                                low={weatherItem.low}
+                                high={weatherItem.high}
+                                date={weatherItem.date}
+                            />
+                        ))
+                    }
+                </ul>
+            </div>
         );
     }
 }

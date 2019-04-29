@@ -1,35 +1,8 @@
-import Theme from "../Theme";
 import React, { Component } from "react";
-import { ThemeProvider } from "styled-components";
 
 import WeatherList from "./WeatherList/WeatherList";
 import HeaderSwitcher from "./Header/HeaderSwitcher";
 import AuthorizationSwitcher from "./Main/Authorization/AuthorizationSwitcher";
-
-const styles = {
-    app: `
-        @media screen and (min-width: 37.5rem) {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-    `,
-    grid: `
-        display: grid;
-        padding: 0 1rem;
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(4, 1fr);
-
-        @media screen and (min-width: 37.5rem) {
-            max-width: 37.5rem;
-        }
-
-        @media screen and (min-width: 60rem) {
-            width: 60rem;
-            max-width: 60rem;
-        }
-    `
-};
 
 class App extends Component {
     state = {
@@ -51,23 +24,21 @@ class App extends Component {
 
     render() {
         return (
-            <ThemeProvider theme={Theme}>
-                <div css={styles.app}>
-                    <HeaderSwitcher
+            <div>
+                <HeaderSwitcher
+                    authorized={this.state.authorized}
+                    username={this.state.user.username}
+                    logout={this.logout}
+                />
+                <div className="container">
+                    <WeatherList />
+                    <AuthorizationSwitcher
+                        login={this.login}
+                        userId={this.state.user.userId}
                         authorized={this.state.authorized}
-                        username={this.state.user.username}
-                        logout={this.logout}
                     />
-                    <div css={styles.grid}>
-                        <WeatherList />
-                        <AuthorizationSwitcher
-                            login={this.login}
-                            userId={this.state.user.userId}
-                            authorized={this.state.authorized}
-                        />
-                    </div>
                 </div>
-            </ThemeProvider>
+            </div>
         );
     }
 }

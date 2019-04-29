@@ -24,6 +24,12 @@ module.exports = {
                         options: { outputPath: "../media/" }
                     }
                 ]
+            },
+            {
+                test: /\.css$/,
+                include: [ /bootstrap/, /css/ ],
+                exclude: /node_modules/,
+                use: [ "style-loader", "css-loader" ]
             }
         ]
     },

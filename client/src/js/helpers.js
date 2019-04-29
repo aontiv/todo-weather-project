@@ -1,7 +1,10 @@
 import moment from "moment";
 
 const Helpers = () => {
-
+    const capitalize = string => {
+        return string[0].toUpperCase() + string.slice(1);
+    };
+      
     const getFormattedTime = () => {
         return moment(new Date()).format("MMMM DD, YYYY hh:mm:ss A");
     };
@@ -19,17 +22,16 @@ const Helpers = () => {
             return parseResponse(response);
         }
         else {
-            parseResponse(response)
-                .then(data => {
-                    throw new ReferenceError(data.message)
-                })
+            return parseResponse(response)
+                .then(data => new Error(data.message))
         }
     };
 
     return {
         getFormattedTime,
         jsonify,
-        handleResponse
+        handleResponse,
+        capitalize
     }
 }
 
