@@ -5,6 +5,7 @@
         "flow": "flow",
         "test": "jest --color",
         "flow:init": "flow init",
+        "build:prod": "webpack -p",
         "build:dev": "webpack --colors --mode=development",
         "build:watch": "webpack --colors --mode=development --watch"
     },
