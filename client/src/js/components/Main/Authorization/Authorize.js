@@ -2,7 +2,7 @@ import uuidv4 from "uuid/v4";
 import classNames from "classnames";
 import Client from "../../../Client";
 import Helpers from "../../../Helpers";
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 
 import Input from "./Input";
 
@@ -12,7 +12,7 @@ const formStyles = validated => classNames(
 );
 
 const errorStyles = error => classNames(
-    [ "col-md-6", "col-xl-4", "alert", "alert-danger", "text-center","fade" ],
+    [ "col-md-6", "col-xl-4", "alert", "alert-danger", "text-center", "fade" ],
     { show: error }
 );
 
@@ -134,7 +134,7 @@ class Authorize extends Component {
                         className="bg-secondary text-white btn btn-block"
                         type="submit"
                     >
-                        {this.state.context.toUpperCase()}
+                        SUBMIT
                     </button>
                 </form>
                 <div className="mb-5">
