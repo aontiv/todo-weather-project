@@ -6,7 +6,7 @@ from flask import Flask, request, jsonify, render_template, make_response
 
 app = Flask(__name__, template_folder="./dist", static_folder="./dist/static")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/database.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:////var/www/todo-weather-project/db/database.db"
 
 ## DATABASE CONFIG ##
 
