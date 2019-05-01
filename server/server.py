@@ -58,7 +58,7 @@ def login():
             result = (json.dumps({ "message": "{}'s password is incorrect".format(rq_data["username"]) }), 400, HEADERS)
         if user and auth_user:
             result = (json.dumps({ "userId": user.user_id, "username": user.username }), 200, HEADERS)
-        
+
         return make_response(result)
     else:
         return render_template("index.html")
@@ -111,10 +111,10 @@ def update_todo():
 @app.route("/delete_todo/<todo_id>", methods=["DELETE"])
 def delete_todo(todo_id):
     todo = Todo.query.filter_by(todo_id=todo_id).first()
-    
+
     db.session.delete(todo)
     db.session.commit()
-    
+
     return jsonify({ "message": "todo with id: {} was deleted".format(todo_id) })
 
 @app.route("/get_weather_forecast", methods=["POST"])

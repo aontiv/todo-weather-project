@@ -2,7 +2,7 @@ import React from "react";
 
 const Input = props => {
     return (
-        <div className="form-group">
+        <div className={`form-group mb-${props.margin}`}>
             <input
                 className={props.className}
                 type={props.type}

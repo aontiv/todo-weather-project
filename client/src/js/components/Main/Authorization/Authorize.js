@@ -2,17 +2,17 @@ import uuidv4 from "uuid/v4";
 import classNames from "classnames";
 import Client from "../../../Client";
 import Helpers from "../../../Helpers";
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 import Input from "./Input";
 
 const formStyles = validated => classNames(
-    [ "p-3", "rounded", "shadow", "mb-5", "mb-sm-0", "login-form" ],
+    [ "col-md-6", "col-xl-4", "shadow", "p-2", "mb-4" ],
     { "was-validated": validated }
 );
 
 const errorStyles = error => classNames(
-    [ "alert", "alert-danger", "text-center", "fixed-bottom", "fade" ],
+    [ "col-md-6", "col-xl-4", "alert", "alert-danger", "text-center","fade" ],
     { show: error }
 );
 
@@ -37,6 +37,7 @@ class Authorize extends Component {
     };
 
     handleContextChange = evt => {
+        evt.preventDefault();
         this.setState({ context: evt.target.textContent });
     };
 
@@ -98,9 +99,11 @@ class Authorize extends Component {
 
     render() {
         return (
-            <div className="row justify-content-center">
+            <div className="row flex-column align-items-center">
                 <form className={formStyles(this.state.validated)} onSubmit={this.handleFormSubmit} noValidate={true}>
-                    <h2 className="text-center text-muted mb-4 login-h2">{Helpers.capitalize(this.state.context)}</h2>
+                    <header className="bg-primary p-1 mb-4 rounded">
+                        <h2 className="text-center text-white">{Helpers.capitalize(this.state.context)}</h2>
+                    </header>
                     <Input
                         className="form-control text-center"
                         type="text"
@@ -112,6 +115,7 @@ class Authorize extends Component {
                         minLength="5"
                         pattern="^\w{5}(\w|-){0,15}$"
                         reference={this.usernameInput}
+                        margin={1}
                     />
                     <Input
                         className="form-control text-center"
@@ -124,36 +128,33 @@ class Authorize extends Component {
                         minLength="5"
                         pattern="^\w{5}(\w|-){0,15}$"
                         reference={this.passwordInput}
+                        margin={0}
                     />
                     <button
-                        className="bg-secondary text-white btn btn-block mb-1"
+                        className="bg-secondary text-white btn btn-block"
                         type="submit"
                     >
                         {this.state.context.toUpperCase()}
                     </button>
-                    <div className="d-flex justify-content-center mb-2">
-                        <button
-                            className="btn btn-link p-1"
-                            type="button"
-                            context={this.state.context}
-                            onClick={this.handleContextChange}
-                        >
-                            login
-                        </button>
-                        <button
-                            className="btn btn-link p-1"
-                            type="button"
-                            context={this.state.context}
-                            onClick={this.handleContextChange}
-                        >
-                            register
-                        </button>
-                    </div>
-                    <small className="help-text text-muted">*alpha-numeric characters, underscores, and dashes</small>
                 </form>
-                <div className={errorStyles(this.state.error)}>
-                    <span className="mx-2">{this.state.error}</span>
+                <div className="mb-5">
+                    <a
+                        href=""
+                        className="px-1"
+                        onClick={this.handleContextChange}
+                    >
+                        login
+                    </a>
+                    <span className="text-primary">|</span>
+                    <a
+                        href=""
+                        className="px-1"
+                        onClick={this.handleContextChange}
+                    >
+                        register
+                    </a>
                 </div>
+                <div className={errorStyles(this.state.error)}>{this.state.error}</div>
             </div>
         );
     }

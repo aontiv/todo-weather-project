@@ -8,9 +8,9 @@ import WeatherItem from "./WeatherItem";
 // Importing all images
 const cache = {};
 
-function importAll (r) {
+const importAll = r => {
   r.keys().forEach(key => cache[key] = r(key));
-}
+};
 
 importAll(require.context("../../../img/", false, /\.png$/));
 
@@ -42,7 +42,7 @@ class WeatherList extends Component {
     render() {
         return (
             <div className="row justify-content-center mb-5">
-                <ul className="overflow-hidden list-group list-group-horizontal">
+                <ul className="overflow-auto list-group list-group-horizontal w-100 justify-content-between">
                     {
                         this.state.weatherList.map(weatherItem => (
                             <WeatherItem
