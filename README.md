@@ -4,6 +4,11 @@
 
 Visit @ [Todo Weather Project](http://todo-weather-project.54.218.142.71.xip.io)
 
+Test Login:
+
+user: testuser
+password: testpassword
+
 ## Summary:
 
 The Todo Weather Project is my take on a simple responsive todo list app with the inclusion of a five day weather forecast.
